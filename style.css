@@ -50,6 +50,7 @@ h6, .h6 { font-size: 16px; }
 .my-6 { margin-top: 4rem; margin-bottom: 4rem; }
 .mb-6 { margin-bottom: 4rem; }
 .my-min-2 { margin-top: -0.5rem; margin-bottom: -0.5rem; }
+.my-min-5 { margin-top: -3rem; margin-bottom: -3rem; }
 
 .py-3-1 { padding-top: 2rem; padding-bottom: 2rem; }
 .pb-3-1 { padding-bottom: 2rem; }
@@ -103,16 +104,16 @@ h6, .h6 { font-size: 16px; }
 .hero { background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80'); }
 
 /* Features */
-/* Fix this soon!!! */
-.features-body [class *= "col"]:nth-child(4) .features-item:before,
-.features-body [class *= "col"]:nth-child(5) .features-item:before,
-.features-body [class *= "col"]:nth-child(6) .features-item:before {
+.features-body [class *= "col"] .features-item:before {    
     content: "";
     position: absolute;
     z-index: 1;
     background: #ddd;
     /* right: 50%; */
     top: 0;
+}
+
+.features-body [class *= "col"]:nth-of-type(n + 4) .features-item:before {
     width: 80%;
     height: 1px;
     transform: translateX(-50%);
@@ -159,22 +160,35 @@ h6, .h6 { font-size: 16px; }
 }
 
 /* Responsive Styles */
+/* If screen width more than 768px */
 @media only screen and (max-width: 768px) {
+    /* Main Styles */
+    /* Hero */
+    .hero-sub-title {
+        font-size: 20px;
+    }
+}
+
+/* If screen width less than 768px */
+@media only screen and (max-width: 768px) {
+    /* Custom and Redefined Styles */
     /* Typography */
     h1, .h1 { font-size: 48px; }
     h2, .h2 { font-size: 38px; }
     
-    /* h3, .h3 { font-size: 20px; } */
-    /* h4, .h4 { font-size: 20px; } */
-    /* h5, .h5 { font-size: 18px; } */
-    /* h6, .h6 { font-size: 16px; } */
-    /* p { font-size: 14px; } */
-
-    /* Contacts */
-    .contacts-body ul {
-        padding: 0 3rem;
+    /* Main Styles */
+    /* Features */
+    .features-body [class *= "col"]:nth-of-type(n + 2) .features-item:before {
+        width: 80%;
+        height: 1px;
+        transform: translateX(-50%);
     }
 
+    .features-body [class *= "col"]:not(:nth-of-type(3n)) .features-item:after {
+        display: none;
+    }
+
+    /* Contacts */
     .contacts-body ul li,
     .contacts-body ul li .contacts-item {
         width: 100%;

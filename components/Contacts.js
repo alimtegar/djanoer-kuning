@@ -8,7 +8,7 @@ const Contacts = () => {
                     <p className="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur.</p>
                 </div>
                 <div className="contacts-body">
-                    <ul className="nav justify-content-center">
+                    <ul className="nav justify-content-center px-5 px-lg-0">
                         <li className="nav-item">
                             <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
                                 <a href="#" className="btn btn-outline-gold circle mr-3 shadow-sm">

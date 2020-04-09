@@ -49,7 +49,7 @@ const Features = () => {
                     <div className="features-body">
                         <div className="row">
                             {features.map((feature) => (
-                                <div className="col-lg-4 px-0" key={feature.id}>
+                                <div className="col-lg-4 px-lg-0" key={feature.id}>
                                     <div className="features-item position-relative p-5">
                                         <h2 className="h5 font-weight-bold mb-0">{feature.title}</h2>
                                         <img src={feature.image} alt={feature.title} className="my-4"/>
