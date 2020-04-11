@@ -11,7 +11,7 @@ const Hero = ({ profile }) => {
                 <div className="pb-4">
                     {/* Hero Sub-Title */}
                     <p className="hero-sub-title h4 font-weight-bold mb-4">
-                        {profile.sub_title ? profile.sub_title : (<TextLoader height={30} width={566} />)}
+                        {profile.sub_title ? profile.sub_title : (<TextLoader height={28.38} width={566} />)}
                     </p>
 
                     {/* Hero Title */}
@@ -26,7 +26,7 @@ const Hero = ({ profile }) => {
                 </div>
 
                 <div className="pt-2">
-                    {profile.order_url ? (<button className="btn btn-outline-light shadow-sm">Pesan Disini</button>) : (<ButtonLoader height={50} width={142} />)}
+                    {profile.order_url ? (<button className="btn btn-outline-light shadow-sm">Pesan Disini</button>) : (<ButtonLoader height={50.38} width={142} />)}
                 </div>
             </div>
         </section>

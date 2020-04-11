@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 // Import Components
 import { SquareLoader } from './Loaders';
@@ -22,7 +23,7 @@ const FeaturesItem = ({ feature }) => {
     }, []);
 
     return (
-        <div className="col-lg-4 px-lg-0" key={feature.id}>
+        <div className="col-lg-4 px-lg-0">
             <div className="features-item position-relative p-5">
                 <h2 className="h5 font-weight-bold mb-0">
                     {feature.title}
@@ -35,6 +36,10 @@ const FeaturesItem = ({ feature }) => {
             </div>
         </div>
     );
+};
+
+FeaturesItem.propTypes = {
+    feature: PropTypes.object.isRequired,
 };
 
 export default FeaturesItem;
