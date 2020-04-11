@@ -1,6 +1,7 @@
 const Pricing = () => {
     const pricing = [
         {
+            id: Math.random(),
             title: 'Bronze',
             price: 100000,
             example_url: 'djanoerkuning.com/nama-unik',
@@ -20,6 +21,7 @@ const Pricing = () => {
             order_url: '#',
         },
         {
+            id: Math.random(),
             title: 'Silver',
             price: 200000,
             example_url: 'djanoerkuning.com/nama-unik',
@@ -39,6 +41,7 @@ const Pricing = () => {
             order_url: '#',
         },
         {
+            id: Math.random(),
             title: 'Gold',
             price: 400000,
             example_url: 'djanoerkuning.com/nama-unik',
@@ -65,7 +68,7 @@ const Pricing = () => {
                     <div className="pricing-body pb-3-1">
                         <div className="row my-min-2">
                             {pricing.map((pricingItem) => (
-                                <div className="col-lg-4 py-2">
+                                <div className="col-lg-4 py-2" key={pricingItem.id}>
                                     <div className="card text-center border-0 rounded-xl shadow-xl">
                                         <div className="card-header position-relative py-4 bg-transparent">
                                             <h2 className="font-secondary h2 text-gold mb-0">{pricingItem.title}</h2>
@@ -83,7 +86,7 @@ const Pricing = () => {
                                         <div className="card-body">
                                             <ul className="nav flex-column mt-3">
                                                 {pricingItem.features.map((pricingItemFeature) => (
-                                                    <li className="nav-item py-1">
+                                                    <li className="nav-item py-1" key={Math.random()}>
                                                         <div className="d-inline-flex align-items-center small text-muted">
                                                             <i className="fa fa-xs fa-check text-gold mr-2" />
                                                             {pricingItemFeature}
@@ -91,7 +94,7 @@ const Pricing = () => {
                                                     </li>
                                                 ))}
                                                 {pricingItem.non_features.map((pricingItemNonFeature) => (
-                                                    <li className="nav-item py-1">
+                                                    <li className="nav-item py-1" key={Math.random()}>
                                                         <div className="d-inline-flex align-items-center small text-gray">
                                                             <i className="fa fa-xs fa-times text-gray mr-2" />
                                                             {pricingItemNonFeature}
