@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 
 // Import Components
-import Hero from '../components/Hero';
+import Hero from '../components/hero/Hero';
 import WhyUs from '../components/WhyUs';
-import Features from '../components/Features';
-import Pricing from '../components/Pricing';
+import Features from '../components/features/Features';
+import Pricing from '../components/pricing/Pricing';
 import CustomDomainPricing from '../components/CustomDomainPricing';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';

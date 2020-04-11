@@ -1,4 +1,4 @@
-import { TextLoader, MultiLineTextLoader, SquareLoader } from './Loaders';
+import { TextLoader, MultiLineTextLoader, SquareLoader } from '../Loaders';
 
 const FeaturesItemLoader = () => (
     <div className="col-lg-4 px-lg-0">

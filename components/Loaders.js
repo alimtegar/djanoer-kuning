@@ -110,3 +110,28 @@ export const SquareLoader = ({ side }) => {
 SquareLoader.propTypes = {
     side: PropTypes.number.isRequired,
 };
+
+// Background Loader
+export const BackgroundLoader = () => {
+    const width = '100%';
+    const height = '100%';
+
+    return (
+        <ContentLoader
+            height={height}
+            width={width}
+            speed={2}
+            primarycolor="#8b463d"
+            secondarycolor="#8e4b42"
+            style={{
+                marginTop: -1,
+                height: height,
+                position: 'absolute',
+                top: 0,
+                left: 0,
+            }}
+        >
+            <rect x="0" y="0" rx="0" ry="0" width={width} height={height} />
+        </ContentLoader>
+    );
+};

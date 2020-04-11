@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // Import Helpers
-import { range } from '../helpers';
+import { range } from '../../helpers';
 
 // Import Components
 import FeaturesItem from './FeaturesItem';

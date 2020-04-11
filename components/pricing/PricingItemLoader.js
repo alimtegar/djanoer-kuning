@@ -1,8 +1,8 @@
 // Import Helpers
-import { range } from '../helpers';
+import { range } from '../../helpers';
 
 // Import Components
-import { TextLoader, ButtonLoader } from './Loaders';
+import { TextLoader, ButtonLoader } from '../Loaders';
 
 const PricingItemLoader = () => (
     <div className="col-lg-4 py-2">

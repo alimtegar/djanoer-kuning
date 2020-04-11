@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 // Import Components
-import { SquareLoader } from './Loaders';
+import { SquareLoader } from '../Loaders';
 
 const FeaturesItem = ({ feature }) => {
     const apiUrl = process.env.API_URL;
