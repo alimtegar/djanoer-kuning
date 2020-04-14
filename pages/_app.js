@@ -1,4 +1,5 @@
 // Import Styles
+import '../custom.css';
 import '../style.css';
 
 const MyApp = ({ Component, pageProps }) => {

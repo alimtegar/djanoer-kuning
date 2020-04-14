@@ -1,4 +1,7 @@
-import { useRouter } from 'next/router';
+import { Fragment, useRouter } from 'next/router';
+
+// Import Designs
+import Design1 from '../designs/Design1';
 
 const Invitation = () => {
     const router = useRouter();
@@ -6,7 +9,7 @@ const Invitation = () => {
 
     return (
         <div>
-            ini invitation : {id}
+            <Design1 />
         </div>
     );
 };

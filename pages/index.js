@@ -57,13 +57,15 @@ const Index = () => {
 
 	return (
 		<div>
-			<Hero profile={profile} />
-			<WhyUs profile={profile} />
-			<Features features={features} />
-			<Pricing pricing={pricing} />
-			<CustomDomainPricing customDomainPricing={customDomainPricing} />
-			<Contacts profile={profile} />
-			<Footer profile={profile} />
+			<main>
+				<Hero profile={profile} />
+				<WhyUs profile={profile} />
+				<Features features={features} />
+				<Pricing pricing={pricing} />
+				<CustomDomainPricing customDomainPricing={customDomainPricing} />
+				<Contacts profile={profile} />
+				<Footer profile={profile} />
+			</main>
 		</div>
 	);
 };

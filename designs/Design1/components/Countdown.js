@@ -1,0 +1,70 @@
+import cx from 'classnames';
+import Countdown from 'react-countdown';
+
+// Import Styles
+import styles from '../Design1.module.css';
+
+// Import Helpers
+import { pad } from '../../../helpers';
+
+const renderer = ({ days, hours, minutes, seconds, completed }) => (
+    <div className="d-inline-flex justify-content-center align-items-center bg-white h2 mb-0 py-4 px-lg-5">
+        <div>
+            <div className={cx(styles['countdown-number'])}>
+                {pad(days)}
+            </div>
+            <div className="small text-muted">
+                Hari
+            </div>
+        </div>
+        <span className="mx-4 mx-lg-5 border-right h-100" />
+        <div>
+            <div className={cx(styles['countdown-number'])}>
+                {pad(hours)}
+            </div>
+            <div className="small text-muted">
+                Jam
+            </div>
+        </div>
+        <span className="mx-4 mx-lg-5 border-right h-100" />
+        <div>
+            <div className={cx(styles['countdown-number'])}>
+                {pad(minutes)}
+            </div>
+            <div className="small text-muted">
+                Menit
+            </div>
+        </div>
+        <span className="mx-4 mx-lg-5 border-right h-100" />
+        <div>
+            <div className={cx(styles['countdown-number'])}>
+                {pad(seconds)}
+            </div>
+            <div className="small text-muted">
+                Detik
+            </div>
+        </div>
+    </div>
+);
+
+const MyCountdown = () => (
+    <section className="text-center pt-6">
+            <div>
+                <h1 className="font-secondary text-gold mb-1">Nantikan Harinya</h1>
+                {/* <h1 className="h6 mb-1">Nantikan Harinya</h1> */}
+                <p className="small text-muted mb-4">
+                    Akan diselenggarakan pada 02 Februari 2020
+                </p>
+            </div>
+            <div className="d-flex justify-content-center">
+                <Countdown
+                    zeroPadDays={2}
+                    zeroPadTime={2}
+                    date={Date.now() + 5000000}
+                    renderer={renderer}
+                />
+            </div>
+    </section>
+);
+
+export default MyCountdown;

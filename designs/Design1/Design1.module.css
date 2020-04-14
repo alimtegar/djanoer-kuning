@@ -1,0 +1,82 @@
+/* Main Styles */
+/* Hero */
+.hero {
+    background-position: center;
+}
+
+/* Information */
+.information-content [class *= 'col']:first-child {
+    border-right: 1px solid #ddd;
+}
+
+.information-content [class *= 'col']:first-child:after {
+    content: '&';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #9CA0A7;
+    font-family: 'Dancing Script';
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    /* border: 1px solid #ddd; */
+    border-radius: 1000px;
+}
+
+/* Gallery */
+.gallery {
+    background-position: center;
+}
+
+.gallery-item {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 360px;
+}
+
+/* Footer */
+.footer a {
+    color: inherit;
+    /* font-weight: bold; */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    /* Countdown */
+    .countdown-number { 
+        font-size: 24px;
+    }
+    .information-content [class *= 'col']:first-child {
+        border-right: unset;
+    }
+
+    .information-content [class *= 'col']:first-child > div {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .information-content [class *= 'col']:first-child:after {
+        content: '&';
+        position: absolute;
+        top: unset;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%, 50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        color: #9CA0A7;
+        font-family: 'Dancing Script';
+        font-size: 24px;
+        height: 50px;
+        width: 50px;
+        /* border: 1px solid #ddd; */
+        border-radius: 1000px;
+    }   
+}
