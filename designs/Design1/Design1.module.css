@@ -28,6 +28,11 @@
     border-radius: 1000px;
 }
 
+/* Map */
+.map iframe { 
+    width: 100%;
+}
+
 /* Gallery */
 .gallery {
     background-position: center;

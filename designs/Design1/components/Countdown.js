@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Countdown from 'react-countdown';
 
@@ -47,24 +48,25 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => (
     </div>
 );
 
-const MyCountdown = () => (
+const MyCountdown = ({ weddingDate }) => (
     <section className="text-center pt-6">
-            <div>
-                <h1 className="font-secondary text-gold mb-1">Nantikan Harinya</h1>
-                {/* <h1 className="h6 mb-1">Nantikan Harinya</h1> */}
-                <p className="small text-muted mb-4">
-                    Akan diselenggarakan pada 02 Februari 2020
-                </p>
-            </div>
-            <div className="d-flex justify-content-center">
-                <Countdown
-                    zeroPadDays={2}
-                    zeroPadTime={2}
-                    date={Date.now() + 5000000}
-                    renderer={renderer}
-                />
-            </div>
+        <div>
+            <h1 className="font-secondary text-gold mb-1">Nantikan Harinya</h1>
+            <p className="small text-muted mb-4">Akan diselenggarakan pada {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        </div>
+        <div className="d-flex justify-content-center">
+            <Countdown
+                zeroPadDays={2}
+                zeroPadTime={2}
+                date={new Date(weddingDate).getTime()}
+                renderer={renderer}
+            />
+        </div>
     </section>
 );
+
+MyCountdown.propTypes = {
+    weddingDate: PropTypes.string.isRequired,
+};
 
 export default MyCountdown;

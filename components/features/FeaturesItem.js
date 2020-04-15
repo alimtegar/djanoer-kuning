@@ -15,8 +15,6 @@ const FeaturesItem = ({ feature }) => {
         fetch(apiUrl + 'files/' + feature.image)
             .then((res) => res.json())
             .then((image) => {
-                console.log(image);
-
                 setFeatureImage(image);
             })
             .catch((err) => console.log(err));

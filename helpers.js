@@ -25,4 +25,8 @@ export const pad = (n, width = 2, z) => {
     z = z || '0';
     n = n + '';
     return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-  }
+}
+
+export const isObjectEmpty = (obj) => {
+    return Object.keys(obj).length === 0 && obj.constructor === Object;
+};

@@ -39,6 +39,7 @@ h6, .h6 { font-size: 16px; }
 /* Space */
 .mt-min-1 { margin-top: -0.25rem; }
 .mt-min-2 { margin-top: -0.5rem; }
+.mt-min-3 { margin-top: -1rem; }
 .my-min-3-1 { margin-top: -2rem; margin-bottom: -2rem; }
 .mt-min-3-1 { margin-top: -2rem; }
 .mb-min-3-1 { margin-bottom: -2rem; }
@@ -141,6 +142,10 @@ h6, .h6 { font-size: 16px; }
 
     /* Space */
     .p-lg-6 { padding: 4rem; }
+
+    /* Fit */
+    .fit-lg-width { width: 100%; height: auto; }
+    .fit-lg-height { height: 100%; width: auto; }
 }
 
 /* If screen width less than 768px */

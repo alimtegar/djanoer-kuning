@@ -1,11 +1,15 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import Slider from "react-slick";
 import cx from 'classnames';
 
 // Import Styles
-import styles from '../Design1.module.css';
+import styles from '../../Design1.module.css';
 
-const Gallery = () => {
+// Import Components
+import GalleryItem from './GalleryItem';
+
+const Gallery = ({ backgroundImage, images, videos }) => {
     let slider;
     const settings = {
         dots: false,
@@ -18,9 +22,7 @@ const Gallery = () => {
     return (
         <section
             className={cx(styles['gallery'], "text-center py-6 mask-dark")}
-            style={{
-                backgroundImage: 'url("https://images.unsplash.com/photo-1544078751-58fee2d8a03b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80")',
-            }}
+            style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
         >
             <Head>
                 <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
@@ -36,18 +38,7 @@ const Gallery = () => {
                         <div className="position-relative">
                             <div className="border p-2">
                                 <Slider ref={(c) => slider = c} {...settings} className={cx(styles["gallery-slider"])}>
-                                    <div className={cx(styles['gallery-item'], "d-flex justify-content-center align-items-center overflow-hidden")}>
-                                        <img src="https://picsum.photos/1200/600?random=1" className="fit-height" />
-                                    </div>
-                                    <div className={cx(styles['gallery-item'], "d-flex justify-content-center align-items-center overflow-hidden")}>
-                                        <img src="https://picsum.photos/1400/700?random=1" className="fit-height" />
-                                    </div>
-                                    <div className={cx(styles['gallery-item'], "d-flex justify-content-center align-items-center overflow-hidden")}>
-                                        <img src="https://picsum.photos/800/400?random=1" className="fit-height" />
-                                    </div>
-                                    <div className={cx(styles['gallery-item'], "d-flex justify-content-center align-items-center overflow-hidden")}>
-                                        <img src="https://picsum.photos/900/600?random=1" className="fit-height" />
-                                    </div>
+                                    {images.map((image) => (<GalleryItem image={image} key={image.id} />))}
                                 </Slider>
                             </div>
 
@@ -67,6 +58,12 @@ const Gallery = () => {
             </div>
         </section>
     );
+};
+
+Gallery.propTypes = {
+    backgroundImage: PropTypes.object.isRequired,
+    images: PropTypes.array.isRequired,
+    videos: PropTypes.array.isRequired,
 };
 
 export default Gallery;
