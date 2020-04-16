@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 // Import Styles
-import styles from '../Design1.module.css';
+import styles from '../Design2.module.css';
 
 const Map = ({ embedMap }) => {
     return (
@@ -14,7 +14,7 @@ const Map = ({ embedMap }) => {
                 <div>
                     <div className="row justify-content-center">
                         <div className="col-lg-7">
-                            <div className="mx-2 pt-2 px-2 border" dangerouslySetInnerHTML={{ __html: embedMap }} />
+                            <div className="mx-2 border rounded-xl shadow-sm" dangerouslySetInnerHTML={{ __html: embedMap }} />
                         </div>
                     </div>
                 </div>

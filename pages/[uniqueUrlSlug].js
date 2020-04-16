@@ -74,12 +74,12 @@ const Invitation = () => {
                                             setDesignModule(Design1);
                                         })
                                         .catch((err) => console.log(err));
-                                // case 'Design2':
-                                //     import('../designs/Design2')
-                                //         .then((Design2) => {
-                                //             setDesignModule(Design2);
-                                //         })
-                                //         .catch((err) => console.log(err));
+                                case 'Design2':
+                                    import('../designs/Design2')
+                                        .then((Design2) => {
+                                            setDesignModule(Design2);
+                                        })
+                                        .catch((err) => console.log(err));
                                 // case 'Design3':
                                 //     import('../designs/Design3')
                                 //         .then((Design3) => {

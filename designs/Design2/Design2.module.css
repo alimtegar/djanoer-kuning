@@ -5,9 +5,9 @@
 }
 
 /* Information */
-.information-content [class *= 'col']:first-child {
+/* .information-content [class *= 'col']:first-child {
     border-right: 1px solid #ddd;
-}
+} */
 
 .information-content [class *= 'col']:first-child:after {
     content: '&';
@@ -18,14 +18,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    color: #9CA0A7;
+    background: #343a40!important;
+    color: #fff;
     font-family: 'Dancing Script';
     font-size: 24px;
     height: 50px;
     width: 50px;
     /* border: 1px solid #ddd; */
     border-radius: 1000px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
 }
 
 /* Map */
@@ -62,9 +63,9 @@
         border-right: unset;
     }
 
-    .information-content [class *= 'col']:first-child > div {
+    /* .information-content [class *= 'col']:first-child > div {
         border-bottom: 1px solid #ddd;
-    }
+    } */
 
     .information-content [class *= 'col']:first-child:after {
         top: unset;
