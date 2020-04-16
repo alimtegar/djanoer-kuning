@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 // Import Components
+import BackgroundMusic from './components/BackgroundMusic';
 import Hero from './components/Hero';
 import Countdown from './components/Countdown';
 import Information from './components/Information';
@@ -8,8 +9,9 @@ import Map from './components/Map';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
-const Design1 = ({ invitation, backgroundImage, images, videos }) => (
+const Design1 = ({ invitation, backgroundImage, backgroundMusic, images, videos }) => (
     <div>
+        <BackgroundMusic backgroundMusic={backgroundMusic} />
         <Hero
             backgroundImage={backgroundImage}
             groomNickname={invitation.groom_nickname}

@@ -15,7 +15,8 @@ const Invitation = () => {
     const [invitation, setInvitation] = useState({});
     const [design, setDesign] = useState({});
     const [DesignModule, setDesignModule] = useState(() => { });
-    const [backgroundImage, setBackgroundImage] = useState('');
+    const [backgroundImage, setBackgroundImage] = useState({});
+    const [backgroundMusic, setBackgroundMusic] = useState({});
     const [images, setImages] = useState([]);
     const [videos, setVideos] = useState([]);
 
@@ -38,6 +39,14 @@ const Invitation = () => {
                         .then((res) => res.json())
                         .then((image) => {
                             setBackgroundImage(image);
+                        })
+                        .catch((err) => console.log(err));
+
+                    // Fetch Background Music
+                    fetch(apiUrl + 'files/' + _invitation.background_music)
+                        .then((res) => res.json())
+                        .then((music) => {
+                            setBackgroundMusic(music);
                         })
                         .catch((err) => console.log(err));
 
@@ -66,6 +75,8 @@ const Invitation = () => {
 
                             setDesign(_design)
 
+                            console.log(_invitation.design);
+
                             // Import Design
                             switch (_design.unique_name) {
                                 case 'Design1':
@@ -74,12 +85,14 @@ const Invitation = () => {
                                             setDesignModule(Design1);
                                         })
                                         .catch((err) => console.log(err));
+                                    break;
                                 case 'Design2':
                                     import('../designs/Design2')
                                         .then((Design2) => {
                                             setDesignModule(Design2);
                                         })
                                         .catch((err) => console.log(err));
+                                    break;
                                 // case 'Design3':
                                 //     import('../designs/Design3')
                                 //         .then((Design3) => {
@@ -100,7 +113,8 @@ const Invitation = () => {
                 (
                     DesignModule &&
                     !isObjectEmpty(invitation) &&
-                    backgroundImage &&
+                    !isObjectEmpty(backgroundImage) &&
+                    !isObjectEmpty(backgroundMusic) &&
                     images &&
                     videos
                 )
@@ -109,6 +123,7 @@ const Invitation = () => {
                         <DesignModule.default
                             invitation={invitation}
                             backgroundImage={backgroundImage}
+                            backgroundMusic={backgroundMusic}
                             images={images}
                             videos={videos}
                         />

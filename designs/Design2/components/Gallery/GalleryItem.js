@@ -11,8 +11,6 @@ import { SquareLoader } from '../../../../components/Loaders';
 const GalleryItem = ({ image }) => {
     const apiUrl = process.env.API_URL;
 
-    console.log(image);
-
     // Use State
     const [galleryItemImage, setGalleryItemImage] = useState();
 
