@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import fetch from 'isomorphic-unfetch';
 
 // Import Helpers
 import { isObjectEmpty } from '../helpers';

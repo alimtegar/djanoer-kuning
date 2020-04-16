@@ -8,13 +8,13 @@ const Map = ({ embedMap }) => {
     return (
         <section className={cx(styles['map'], "text-center pb-6")}>
             <div className="container">
-                <div>
-                    <h1 className="font-secondary text-gold mb-4">Peta Lokasi</h1>
+                <div className="mb-4">
+                    <h1 className="h2 font-secondary text-gold mb-0">Peta Lokasi</h1>
                 </div>
                 <div>
                     <div className="row justify-content-center">
                         <div className="col-lg-7">
-                            <div className="mx-2 pt-2 px-2 border" dangerouslySetInnerHTML={{ __html: embedMap }} />
+                            <div className="pt-2 px-2 border" dangerouslySetInnerHTML={{ __html: embedMap }} />
                         </div>
                     </div>
                 </div>

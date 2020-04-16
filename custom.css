@@ -39,10 +39,22 @@ h6, .h6 { font-size: 16px; }
 .btn-mask-dark { background-color: rgba(0, 0, 0, 0.66); color: #fff; }
 .btn-mask-dark:hover { background-color: #343a40; color: #fff; }
 
+.form-control {
+    padding: 1rem;
+    font-size: 14px;
+    height: unset;
+    border-radius: 0;
+}
+
+.form-control::placeholder {
+    color: #9CA0A7;
+}
+
 /* Space */
 .mt-min-1 { margin-top: -0.25rem; }
 .mt-min-2 { margin-top: -0.5rem; }
 .mt-min-3 { margin-top: -1rem; }
+.mt-min-4 { margin-top: -1.5rem; }
 .my-min-3-1 { margin-top: -2rem; margin-bottom: -2rem; }
 .mt-min-3-1 { margin-top: -2rem; }
 .mb-min-3-1 { margin-bottom: -2rem; }

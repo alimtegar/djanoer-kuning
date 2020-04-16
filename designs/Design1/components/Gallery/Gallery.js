@@ -30,8 +30,8 @@ const Gallery = ({ backgroundImage, images, videos }) => {
             </Head>
 
             <div className="container">
-                <div>
-                    <h1 className="font-secondary text-white mb-4">Galeri</h1>
+                <div className="mb-4">
+                    <h1 className="h2 font-secondary text-white mb-0">Galeri</h1>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-lg-7">

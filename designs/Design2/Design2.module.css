@@ -2,6 +2,7 @@
 /* Hero */
 .hero {
     background-position: center;
+    background-size: 100% auto;
 }
 
 /* Information */
@@ -38,6 +39,7 @@
 /* Gallery */
 .gallery {
     background-position: center;
+    background-size: 100% auto;
 }
 
 .gallery-item {
@@ -55,6 +57,13 @@
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
+    /* Main Styles */
+    /* Hero */
+    .hero { background-size: auto 100%; }
+
+    /* Gallery */
+    .gallery { background-size: auto 100%; }
+
     /* Countdown */
     .countdown-number { 
         font-size: 24px;

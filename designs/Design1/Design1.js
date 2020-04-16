@@ -7,6 +7,7 @@ import Countdown from './components/Countdown';
 import Information from './components/Information';
 import Map from './components/Map';
 import Gallery from './components/Gallery';
+import Comments from './components/Comments';
 import Footer from './components/Footer';
 
 const Design1 = ({ invitation, backgroundImage, backgroundMusic, images, videos }) => (
@@ -42,7 +43,8 @@ const Design1 = ({ invitation, backgroundImage, backgroundMusic, images, videos 
             images={images}
             videos={videos}
         />
-        <Footer />
+        <Comments invitationId={invitation.id} />
+        <Footer backgroundImage={backgroundImage} />
     </div>
 );
 
