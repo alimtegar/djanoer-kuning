@@ -16,7 +16,10 @@ const Gallery = ({ backgroundImage, images, videos }) => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        pauseOnHover: true,
     };
 
     return (
@@ -30,8 +33,8 @@ const Gallery = ({ backgroundImage, images, videos }) => {
             </Head>
 
             <div className="container">
-                <div>
-                    <h1 className="font-secondary text-white mb-4">Galeri</h1>
+                <div className="mb-4">
+                    <h1 className="h2 font-secondary text-white">Galeri</h1>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-lg-7">

@@ -33,14 +33,14 @@ const Information = ({
                         <div className="row justify-content-center align-items-center">
                             <div className="col-lg-4 position-relative">
                                 <div className="text-center py-5 py-lg-3 px-5">
-                                    <h1 className="font-secondary text-gold mb-0">{groomNickname}</h1>
+                                    <h1 className="h2 font-secondary text-gold mb-0">{groomNickname}</h1>
                                     <h2 className="h6 mb-4">{groomName}</h2>
                                     <p className="small text-muted mb-0">Putra Pertama dari {groomFatherName} dan {groomMotherName}.</p>
                                 </div>
                             </div>
                             <div className="col-lg-4">
                                 <div className="text-center py-5 py-lg-3 px-5">
-                                    <h1 className="font-secondary text-gold mb-0">{brideNickname}</h1>
+                                    <h1 className="h2 font-secondary text-gold mb-0">{brideNickname}</h1>
                                     <h2 className="h6 mb-4">{brideName}</h2>
                                     <p className="small text-muted mb-0">Putra Pertama dari {brideFatherName} dan {brideMotherName}.</p>
                                 </div>
@@ -61,7 +61,7 @@ const Information = ({
                         <div className="row justify-content-center align-items-center">
                             <div className="col-lg-5">
                                 <div className="text-center py-5 py-lg-3 px-5">
-                                    <h1 className="font-secondary text-gold mb-4">Akad</h1>
+                                    <h1 className="h2 font-secondary text-gold mb-4">Akad</h1>
                                     <h2 className="h6 mb-1">Waktu</h2>
                                     <p className="small text-muted">
                                         {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul {contractStartTime} s/d {contractEndTime} WIB
@@ -72,7 +72,7 @@ const Information = ({
                             </div>
                             <div className="col-lg-5">
                                 <div className="text-center py-5 py-lg-3 px-5">
-                                    <h1 className="font-secondary text-gold mb-4">Resepsi</h1>
+                                    <h1 className="h2 font-secondary text-gold mb-4">Resepsi</h1>
 
                                     <h2 className="h6 mb-1">Waktu</h2>
                                     <p className="small text-muted">

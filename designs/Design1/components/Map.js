@@ -14,7 +14,7 @@ const Map = ({ embedMap }) => {
                 <div>
                     <div className="row justify-content-center">
                         <div className="col-lg-7">
-                            <div className="pt-2 px-2 border" dangerouslySetInnerHTML={{ __html: embedMap }} />
+                            <div className="p-2 border" dangerouslySetInnerHTML={{ __html: embedMap }} />
                         </div>
                     </div>
                 </div>

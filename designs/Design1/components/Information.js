@@ -35,14 +35,14 @@ const Information = ({
                                 <div className="text-center py-5 py-lg-3 px-5">
                                     <h1 className="h2 font-secondary text-gold mb-0">{groomNickname}</h1>
                                     <h2 className="h6 mb-4">{groomName}</h2>
-                                    <p className="small text-muted mb-0">Putra Pertama dari {groomFatherName} dan {groomMotherName}.</p>
+                                    <p className="small text-muted mb-2">Putra Pertama dari {groomFatherName} dan {groomMotherName}.</p>
                                 </div>
                             </div>
                             <div className="col-lg-4">
                                 <div className="text-center py-5 py-lg-3 px-5">
                                     <h1 className="h2 font-secondary text-gold mb-0">{brideNickname}</h1>
                                     <h2 className="h6 mb-4">{brideName}</h2>
-                                    <p className="small text-muted mb-0">Putra Pertama dari {brideFatherName} dan {brideMotherName}.</p>
+                                    <p className="small text-muted mb-2">Putra Pertama dari {brideFatherName} dan {brideMotherName}.</p>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ const Information = ({
                                         {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul {contractStartTime} s/d {contractEndTime} WIB
                                     </p>
                                     <h2 className="h6 mb-1">Alamat</h2>
-                                    <p className="small text-muted">{contractAddress}</p>
+                                    <p className="small text-muted mb-2">{contractAddress}</p>
                                 </div>
                             </div>
                             <div className="col-lg-5">
@@ -79,7 +79,7 @@ const Information = ({
                                         {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul {receptionStartTime} s/d {receptionEndTime} WIB
                                     </p>
                                     <h2 className="h6 mb-1">Alamat</h2>
-                                    <p className="small text-muted">{receptionAddress}</p>
+                                    <p className="small text-muted mb-2">{receptionAddress}</p>
                                 </div>
                             </div>
                         </div>

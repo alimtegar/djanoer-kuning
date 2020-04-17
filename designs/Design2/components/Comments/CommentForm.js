@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+
+// Import Styles
+import styles from '../../Design2.module.css';
 
 const CommentForm = ({ addComment }) => {
     // Use State
@@ -25,7 +29,7 @@ const CommentForm = ({ addComment }) => {
     };
 
     return (
-        <form className="text-center" onSubmit={(e) => handleSubmit(e)}>
+        <form className={cx(styles['comments-form'], "text-center")} onSubmit={(e) => handleSubmit(e)}>
             <div className="form-group">
                 <input type="text" name="name" placeholder="Nama Anda" className="form-control" onChange={(e) => handleChange(e)} />
             </div>

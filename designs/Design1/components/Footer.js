@@ -9,7 +9,7 @@ const Footer = ({ backgroundImage }) => (
         style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
     >
         <p className="small mb-0">
-            © <a href="#">Djanoer Kuning</a> 2020 · Developed by <a href="#">Alterweb · Icon made by Elias Bikbulatov from www.flaticon.com</a>
+            © <a href="#">Djanoer Kuning</a> {new Date().getFullYear()} · Developed by <a href="#">Alterweb · Icon made by Elias Bikbulatov from www.flaticon.com</a>
         </p>
     </footer>
 );

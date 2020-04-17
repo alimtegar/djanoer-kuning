@@ -9,7 +9,7 @@ import styles from '../Design2.module.css';
 import { pad } from '../../../helpers';
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => (
-    <div className="d-inline-flex justify-content-center align-items-center bg-white h2 mb-0 py-4 px-lg-5">
+    <div className="d-inline-flex justify-content-center align-items-center bg-white h2 mb-0 px-lg-5">
         <div className="bg-dark text-white p-3 rounded-xl shadow-sm">
             <div className={cx(styles['countdown-number'])}>
                 {pad(days)}
@@ -50,9 +50,9 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => (
 
 const MyCountdown = ({ weddingDate }) => (
     <section className="text-center pt-6">
-        <div>
-            <h1 className="font-secondary text-gold mb-1">Nantikan Harinya</h1>
-            <p className="small text-muted mb-4">Akan diselenggarakan pada {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <div className="mb-5">
+            <h1 className="h2 font-secondary text-gold mb-1">Nantikan Harinya</h1>
+            <h2 className="small text-muted mb-0">Akan diselenggarakan pada {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</h2>
         </div>
         <div className="d-flex justify-content-center">
             <Countdown
