@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // Import Components
 import HeroLoader from './HeroLoader';
 
-const Hero = ({ profile }) => (profile.title && profile.sub_title && profile.tagline) ? (
+const Hero = ({ profile }) => (profile.title && profile.sub_title && profile.tagline && profile.order_url) ? (
     <section className="hero d-flex justify-content-center align-items-center vh-75 mask-gold">
         <div className="text-center text-white mt-min-3-1">
             <div className="pb-4">
@@ -24,7 +24,7 @@ const Hero = ({ profile }) => (profile.title && profile.sub_title && profile.tag
             </div>
 
             <div className="pt-2">
-                <button className="btn btn-outline-light shadow-sm">Pesan Disini</button>
+                <a href={profile.order_url} target="_blank" role="button" className="btn btn-outline-light shadow-sm">Pesan Disini <i className="fa fa-external-link-alt fa-sm ml-1 y-min-1" /></a>
             </div>
         </div>
     </section>

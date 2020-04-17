@@ -4,6 +4,7 @@ import fetch from 'isomorphic-unfetch';
 // Import Components
 import Hero from '../components/Hero';
 import WhyUs from '../components/WhyUs';
+import DesignExamples from '../components/DesignExamples';
 import Features from '../components/Features';
 import Pricing from '../components/Pricing';
 import CustomDomainPricing from '../components/CustomDomainPricing';
@@ -60,6 +61,7 @@ const Index = () => {
 			<main>
 				<Hero profile={profile} />
 				<WhyUs profile={profile} />
+				<DesignExamples />
 				<Features features={features} />
 				<Pricing pricing={pricing} />
 				<CustomDomainPricing customDomainPricing={customDomainPricing} />
