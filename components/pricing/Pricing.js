@@ -9,7 +9,7 @@ const Pricing = ({ pricing }) => pricing.length ? (
         <div className="container">
             <div className="pricing-body pb-3-1">
                 <div className="row my-min-2">
-                    {pricing.map((pricingItem) => (<PricingItem pricingItem={pricingItem} key={pricingItem.item} />))}
+                    {pricing.map((pricingItem) => (<PricingItem pricingItem={pricingItem} key={pricingItem.id} />))}
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@ const Pricing = ({ pricing }) => pricing.length ? (
 ) : (<PricingLoader />);
 
 Pricing.propTypes = {
-    pricing: PropTypes.object.isRequired,
+    pricing: PropTypes.array.isRequired,
 };
 
 export default Pricing;

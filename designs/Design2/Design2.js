@@ -21,6 +21,7 @@ const Design2 = ({ invitation, backgroundImage, backgroundMusic, images, videos 
         />
         <Countdown weddingDate={invitation.wedding_date} />
         <Information
+            backgroundImage={backgroundImage}
             groomNickname={invitation.groom_nickname}
             brideNickname={invitation.bride_nickname}
             groomName={invitation.groom_name}
@@ -38,8 +39,8 @@ const Design2 = ({ invitation, backgroundImage, backgroundMusic, images, videos 
             receptionAddress={invitation.reception_address}
         />
         <Map embedMap={invitation.embed_map} />
-        <Gallery 
-            backgroundImage={backgroundImage} 
+        <Gallery
+            backgroundImage={backgroundImage}
             images={images}
             videos={videos}
         />

@@ -37,7 +37,7 @@ const PricingItem = ({ pricingItem }) => (
                 </ul>
             </div>
             <div className="card-footer bg-transparent mt-min-1 pt-2 pb-5 pt-0 border-top-0">
-                <button className="btn btn-outline-gold shadow-sm">Pesan Disini</button>
+                <a href={pricingItem.order_url} role="button" className="btn btn-outline-gold shadow-sm">Pesan Disini</a>
             </div>
         </div>
     </div>

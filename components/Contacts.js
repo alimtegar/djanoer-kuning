@@ -14,7 +14,7 @@ const Contacts = ({ profile }) => (
                 <ul className="nav justify-content-center px-5 px-lg-0">
                     <li className="nav-item">
                         <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
-                            <a href="#" className="btn btn-outline-gold circle mr-3 shadow-sm">
+                            <a href="#" aria-label="whatsapp" className="btn btn-outline-gold circle mr-3 shadow-sm">
                                 <i className="fab fa-whatsapp fa-1p66x" />
                             </a>
                             <div>
@@ -27,7 +27,7 @@ const Contacts = ({ profile }) => (
                     </li>
                     <li className="nav-item">
                         <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
-                            <a href="#" className="btn btn-outline-gold circle mr-3 shadow-sm">
+                            <a href="#" aria-label="email" className="btn btn-outline-gold circle mr-3 shadow-sm">
                                 <i className="far fa-envelope fa-lg" />
                             </a>
                             <div>
@@ -40,7 +40,7 @@ const Contacts = ({ profile }) => (
                     </li>
                     <li className="nav-item">
                         <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
-                            <a href="#" className="btn btn-outline-gold circle mr-3 shadow-sm">
+                            <a href="#" aria-label="instagram" className="btn btn-outline-gold circle mr-3 shadow-sm">
                                 <i className="fab fa-instagram fa-1p66x" />
                             </a>
                             <div>

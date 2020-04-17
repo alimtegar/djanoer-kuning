@@ -3,6 +3,7 @@
 .hero {
     background-position: center;
     background-size: 100% auto;
+    background-attachment: fixed;
 }
 
 /* Information */
@@ -13,6 +14,7 @@
 .information-content [class *= 'col']:first-child:after {
     content: '&';
     position: absolute;
+    z-index: 1;
     top: 50%;
     right: 0;
     transform: translate(50%, -50%);
@@ -40,6 +42,7 @@
 .gallery {
     background-position: center;
     background-size: 100% auto;
+    background-attachment: fixed;
 }
 
 .gallery-item {

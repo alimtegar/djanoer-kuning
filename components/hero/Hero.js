@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 // Import Components
@@ -8,14 +9,18 @@ const Hero = ({ profile }) => (profile.title && profile.sub_title && profile.tag
         <div className="text-center text-white mt-min-3-1">
             <div className="pb-4">
                 {/* Hero Sub-Title */}
-                <p className="hero-sub-title h4 font-weight-bold mb-4">
+                <p className="hero-sub-title h4 font-weight-bold mb-4 mx-3">
                     {profile.sub_title}
                 </p>
 
                 {/* Hero Title */}
-                <h1 className="font-secondary mb-0">
-                    {profile.title}
-                </h1>
+                <Link href="/">
+                    <a>
+                        <h1 className="font-secondary mb-0">
+                            {profile.title}
+                        </h1>
+                    </a>
+                </Link>
 
                 {/* Hero Tagline */}
                 <h2 className="h5 font-weight-bold mb-1">
@@ -24,7 +29,7 @@ const Hero = ({ profile }) => (profile.title && profile.sub_title && profile.tag
             </div>
 
             <div className="pt-2">
-                <a href={profile.order_url} target="_blank" role="button" className="btn btn-outline-light shadow-sm">Pesan Disini <i className="fa fa-external-link-alt fa-sm ml-1 y-min-1" /></a>
+                <a href={profile.order_url} role="button" className="btn btn-outline-light shadow-sm">Pesan Disini</a>
             </div>
         </div>
     </section>

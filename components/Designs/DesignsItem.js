@@ -19,16 +19,20 @@ const Design = ({ design }) => {
     }, []);
 
     return (
-        <div className="col-lg-4">
+        <div className="col-lg-4 py-5 py-lg-0">
             <div className="text-center">
                 <h1 className="h5 font-weight-bold mb-1">
                     {design.title}
                 </h1>
-                {/* <p className="small text-muted">Kode - {design.unique_name}</p> */}
-                {designImage ? (<img src={designImage.data.data.thumbnails[3].url} alt="" />) : null}
-                <button className="btn btn-outline-gold">
-                    Lihat Desain
-                </button>
+                <p className="small text-muted mb-0">ID: {design.unique_name}</p>
+                <div className="d-flex justify-content-center">
+                    {designImage ? (<img src={designImage.data.data.thumbnails[5].url} alt="" width={400} className="x-4" />) : null}
+                </div>
+                {design.example_url ? (
+                    <a href={design.example_url} target="_blank" role="button" className="btn btn-outline-gold">
+                        Lihat Desain <i className="fa fa-external-link-alt fa-sm ml-1 y-min-1" />
+                    </a>
+                ) : null}
             </div>
         </div>
     );

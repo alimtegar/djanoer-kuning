@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 
 // Import Components
+import Head from '../components/Head';
 import Hero from '../components/Hero';
 import WhyUs from '../components/WhyUs';
 import DesignExamples from '../components/DesignExamples';
@@ -13,13 +14,12 @@ import Footer from '../components/Footer';
 
 const Index = () => {
 	const apiUrl = process.env.API_URL;
-	// const apiToken =  process.env.API_TOKEN;
 
 	// Use State
 	const [profile, setProfile] = useState({});
 	const [features, setFeatures] = useState([]);
 	const [pricing, setPricing] = useState([]);
-	const [customDomainPricing, setCustomDomainPricing] = useState([]);
+	const [customDomainPricing, setCustomDomainPricing] = useState({});
 
 	// Use Effect
 	useEffect(() => {
@@ -59,6 +59,7 @@ const Index = () => {
 	return (
 		<div>
 			<main>
+				<Head />
 				<Hero profile={profile} />
 				<WhyUs profile={profile} />
 				<DesignExamples />

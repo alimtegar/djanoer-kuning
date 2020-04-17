@@ -96,7 +96,10 @@ h6, .h6 { font-size: 16px; }
 
 /* Mask */
 .mask-gold { box-shadow: inset 0 0 0 1000px rgba(218, 165, 31, 0.33); }
+
 .mask-dark { box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.66); }
+.mask-dark-thin { box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.33); }
+/* .mask-dark-thick { box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.75); } */
 
 /* Position */
 .top-0 { top: 0; }
@@ -106,6 +109,8 @@ h6, .h6 { font-size: 16px; }
 .bottom-0 { bottom: 0; }
 
 .x-1 { transform: translateX(1px); }
+.x-2 { transform: translateX(2px); }
+.x-4 { transform: translateX(4px); }
 .x-min-50 { transform: translateX(-50%); }
 .y-50 { transform: translateY(50%); }
 .y-1 { transform: translateY(1px); }

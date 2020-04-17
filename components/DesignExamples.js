@@ -1,3 +1,5 @@
+import Link from 'next/Link';
+
 const DesignExamples = () => (
     <section className="text-center py-6">
         <div className="mb-5">
@@ -5,10 +7,14 @@ const DesignExamples = () => (
             <p className="small text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
         </div>
         <div>
-            <img src="/assets/images/design-examples.jpg" alt="Contoh Desain" />
+            <img src="/assets/images/design-examples.jpg" alt="Contoh Desain" className="img-fluid" />
         </div>
         <div className="mt-5">
-            <a href="/" role="button" className="btn btn-outline-gold">Lihat Contoh Desain</a>
+            <Link href="/designs" >
+                <a role="button" className="btn btn-outline-gold">
+                    Lihat Contoh Desain
+            </a>
+            </Link>
         </div>
     </section>
 );

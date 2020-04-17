@@ -144,9 +144,7 @@ const InvitationLoader = ({ condition, isAutoOpen }) => {
     return !isHide ? (
         <div
             className="hero position-fixed z-99 d-flex justify-content-center align-items-center text-white text-center vh-100 vw-100 mask-gold"
-            style={{
-                backgroundImage: 'url("/assets/images/photo-1456659122552-6ee1788174bb.jpeg")',
-            }}
+            style={{ backgroundImage: ' url(https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80)', }}
         >
             <div>
                 <div className="pb-4">

@@ -20,7 +20,7 @@ const Footer = ({ profile }) => profile.title ? (
     </footer>
 ) : <FooterLoader />;
 
-FooterLoader.propTypes = {
+Footer.propTypes = {
     profile: PropTypes.object.isRequired,
 };
 

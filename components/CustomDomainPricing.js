@@ -27,16 +27,16 @@ const CustomDomainPricing = ({ customDomainPricing }) => (
                         </div>
                         <div className="d-flex flex-column flex-lg-row align-items-center">
                             {customDomainPricing.order_url ? (
-                                <button className="btn btn-outline-gold shadow-sm">
+                                <a href={customDomainPricing.order_url} role="button" className="btn btn-outline-gold shadow-sm">
                                     Pesan Disini
-                                </button>
+                                </a>
                             ) : (<ButtonLoader height={50.38} width={142} />)}
 
                             <span className="small text-muted mx-0 mx-lg-3 my-3 my-lg-0">atau</span>
                             {customDomainPricing.order_url ? (
-                                <button className="btn btn-outline-gray shadow-sm">
-                                    Cek Domain
-                                </button>
+                                <a href={customDomainPricing.check_domain_url} role="button" target="_blank" rel="noopener" rel="noreferrer" className="btn btn-outline-gray shadow-sm">
+                                    Cek Domain <i className="fa fa-external-link-alt fa-sm ml-1 y-min-1" />
+                                </a>
                             ) : (<ButtonLoader height={50.38} width={143} />)}
                         </div>
                     </div>
