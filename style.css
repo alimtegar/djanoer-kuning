@@ -9,7 +9,11 @@ html, body {
 
 /* Main Styles */
 /* Hero */
-.hero { background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80'); }
+.hero { 
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80'); 
+    background-size: 100% auto;
+    background-position: center;
+}
 
 /* Why US */
 .why-us-content p:last-child { margin-bottom: 0; }
@@ -75,6 +79,10 @@ html, body {
 @media only screen and (max-width: 768px) {
     /* Main Styles */
     /* Hero */
+    .hero {
+        background-size: auto 100%;
+    }
+
     .hero-sub-title {
         font-size: 20px;
     }
