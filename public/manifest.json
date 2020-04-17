@@ -1,0 +1,10 @@
+{
+  "name": "Djanoer Kuning",
+  "theme_color": "#daa520",
+  "background_color": "#daa520",
+  "display": "browser",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": null,
+  "splash_pages": null
+}
