@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Fade from 'react-reveal/Slide';
 
 // Import Components
 import { SquareLoader } from '../Loaders';
@@ -23,14 +24,18 @@ const FeaturesItem = ({ feature }) => {
     return (
         <div className="col-lg-4 px-lg-0">
             <div className="features-item position-relative p-5">
-                <h2 className="h5 font-weight-bold mb-0">
-                    {feature.title}
-                </h2>
-                {featureImage ? (<img src={featureImage.data.data.full_url} alt={feature.title} height={100} className="my-4" />) : (<div className="my-4">
-                    <SquareLoader side={101.5} />
-                </div>)}
+                <Fade bottom>
+                    <div>
+                        <h2 className="h5 font-weight-bold mb-0">
+                            {feature.title}
+                        </h2>
+                        {featureImage ? (<img src={featureImage.data.data.full_url} alt={feature.title} height={100} className="my-4" />) : (<div className="my-4">
+                            <SquareLoader side={101.5} />
+                        </div>)}
 
-                <p className="small text-muted mb-0">{feature.description}</p>
+                        <p className="small text-muted mb-0">{feature.description}</p>
+                    </div>
+                </Fade>
             </div>
         </div>
     );

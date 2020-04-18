@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Fade from 'react-reveal/Fade';
 
 // Import Components
 import { TextLoader, ButtonLoader } from './Loaders';
@@ -13,43 +14,49 @@ const Contacts = ({ profile }) => (
             <div className="contacts-body">
                 <ul className="nav justify-content-center px-5 px-lg-0">
                     <li className="nav-item">
-                        <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
-                            <a href="#" aria-label="whatsapp" className="btn btn-outline-gold circle mr-3 shadow-sm">
-                                <i className="fab fa-whatsapp fa-1p66x" />
-                            </a>
-                            <div>
-                                <h2 className="h6 font-weight-bold mb-0">No. Telp</h2>
-                                <span className="small text-muted">
-                                    {profile.phone ? profile.phone : (<TextLoader height={18} width={115} />)}
-                                </span>
+                        <Fade bottom>
+                            <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
+                                <a href="#" aria-label="whatsapp" className="btn btn-outline-gold circle mr-3 shadow-sm">
+                                    <i className="fab fa-whatsapp fa-1p66x" />
+                                </a>
+                                <div>
+                                    <h2 className="h6 font-weight-bold mb-0">No. Telp</h2>
+                                    <span className="small text-muted">
+                                        {profile.phone ? profile.phone : (<TextLoader height={18} width={115} />)}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        </Fade>
                     </li>
                     <li className="nav-item">
-                        <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
-                            <a href="#" aria-label="email" className="btn btn-outline-gold circle mr-3 shadow-sm">
-                                <i className="far fa-envelope fa-lg" />
-                            </a>
-                            <div>
-                                <h2 className="h6 font-weight-bold mb-0">Email</h2>
-                                <span className="small text-muted">
-                                    {profile.email ? profile.email : (<TextLoader height={18} width={167} />)}
-                                </span>
+                        <Fade bottom>
+                            <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
+                                <a href="#" aria-label="email" className="btn btn-outline-gold circle mr-3 shadow-sm">
+                                    <i className="far fa-envelope fa-lg" />
+                                </a>
+                                <div>
+                                    <h2 className="h6 font-weight-bold mb-0">Email</h2>
+                                    <span className="small text-muted">
+                                        {profile.email ? profile.email : (<TextLoader height={18} width={167} />)}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        </Fade>
                     </li>
                     <li className="nav-item">
-                        <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
-                            <a href="#" aria-label="instagram" className="btn btn-outline-gold circle mr-3 shadow-sm">
-                                <i className="fab fa-instagram fa-1p66x" />
-                            </a>
-                            <div>
-                                <h2 className="h6 font-weight-bold mb-0">Instagram</h2>
-                                <span className="small text-muted">
-                                    {profile.instagram ? profile.instagram : (<TextLoader height={18} width={111} />)}
-                                </span>
+                        <Fade bottom>
+                            <div className="contacts-item position-relative d-inline-flex align-items-center px-0 px-lg-5 py-3 py-lg-0">
+                                <a href="#" aria-label="instagram" className="btn btn-outline-gold circle mr-3 shadow-sm">
+                                    <i className="fab fa-instagram fa-1p66x" />
+                                </a>
+                                <div>
+                                    <h2 className="h6 font-weight-bold mb-0">Instagram</h2>
+                                    <span className="small text-muted">
+                                        {profile.instagram ? profile.instagram : (<TextLoader height={18} width={111} />)}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        </Fade>
                     </li>
                 </ul>
             </div>

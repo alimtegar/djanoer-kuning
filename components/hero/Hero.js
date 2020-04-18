@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 // Import Components
@@ -14,16 +13,12 @@ const Hero = ({ profile }) => (profile.title && profile.sub_title && profile.tag
                 </p>
 
                 {/* Hero Title */}
-                <Link href="/">
-                    <a>
-                        <h1 className="font-secondary mb-0">
-                            {profile.title}
-                        </h1>
-                    </a>
-                </Link>
+                <h1 className="font-secondary mb-0">
+                    {profile.title}
+                </h1>
 
                 {/* Hero Tagline */}
-                <h2 className="h5 font-weight-bold mb-1">
+                <h2 className="h6 font-italic font-weight-bold mb-1">
                     {profile.tagline}
                 </h2>
             </div>

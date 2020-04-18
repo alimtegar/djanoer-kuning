@@ -1,4 +1,5 @@
 import Link from 'next/Link';
+import Fade from 'react-reveal/Slide';
 
 const DesignExamples = () => (
     <section className="text-center py-6">
@@ -7,7 +8,9 @@ const DesignExamples = () => (
             <p className="small text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
         </div>
         <div>
-            <img src="/assets/images/design-examples.jpg" alt="Contoh Desain" className="img-fluid" />
+            <Fade bottom>
+                <img src="/assets/images/design-examples.jpg" alt="Contoh Desain" className="img-fluid" />
+            </Fade>
         </div>
         <div className="mt-5">
             <Link href="/designs" >

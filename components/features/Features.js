@@ -17,7 +17,11 @@ const Features = ({ features }) => (
                 </div>
                 <div className="features-body">
                     <div className="row">
-                        {features.length ? features.map((feature) => (<FeaturesItem feature={feature} key={feature.id} />)) : range(0, 6).map(() => ((<FeaturesItemLoader key={Math.random()} />)))}
+                        {features.length ? features.map((feature) => (
+                            <FeaturesItem feature={feature} key={feature.id} />)
+                        ) : range(0, 6).map(() => ((
+                            <FeaturesItemLoader key={Math.random()} />
+                        )))}
                     </div>
                 </div>
             </div>

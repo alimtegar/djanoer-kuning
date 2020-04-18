@@ -58,8 +58,9 @@ const Index = () => {
 
 	return (
 		<div>
+			<Head />
+
 			<main>
-				<Head />
 				<Hero profile={profile} />
 				<WhyUs profile={profile} />
 				<DesignExamples />
