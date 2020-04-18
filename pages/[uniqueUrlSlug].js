@@ -80,24 +80,24 @@ const Invitation = () => {
 
                             // Import Design
                             switch (_design.unique_name) {
-                                case 'Design1':
-                                    import('../designs/Design1')
-                                        .then((Design1) => {
-                                            setDesignModule(Design1);
+                                case 'Bronze1':
+                                    import('../designs/Bronze1')
+                                        .then((Bronze1) => {
+                                            setDesignModule(Bronze1);
                                         })
                                         .catch((err) => console.log(err));
                                     break;
-                                case 'Design2':
-                                    import('../designs/Design2')
-                                        .then((Design2) => {
-                                            setDesignModule(Design2);
+                                case 'Silver1':
+                                    import('../designs/Silver1')
+                                        .then((Silver1) => {
+                                            setDesignModule(Silver1);
                                         })
                                         .catch((err) => console.log(err));
                                     break;
-                                case 'Design3':
-                                    import('../designs/Design3')
-                                        .then((Design3) => {
-                                            setDesignModule(Design3);
+                                case 'Gold1':
+                                    import('../designs/Gold1')
+                                        .then((Gold1) => {
+                                            setDesignModule(Gold1);
                                         })
                                         .catch((err) => console.log(err));
                                     break;
