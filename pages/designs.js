@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import Designs from '../components/Designs';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const Index = () => {
     const apiUrl = process.env.API_URL;
@@ -41,8 +42,10 @@ const Index = () => {
                 <Hero profile={profile} />
                 <Designs designs={designs} />
                 <Contacts profile={profile} />
-                <Footer profile={profile} />
             </main>
+
+            <Footer profile={profile} />
+            <WhatsAppButton orderUrl={profile.order_url} />
         </div>
     );
 };

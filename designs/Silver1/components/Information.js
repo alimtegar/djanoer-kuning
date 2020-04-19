@@ -69,7 +69,7 @@ const Information = ({
                                     <h1 className="h2 font-secondary text-gold mb-4">Akad</h1>
                                     <h2 className="h6 mb-1">Waktu</h2>
                                     <p className="small text-muted">
-                                        {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul {contractStartTime} s/d {contractEndTime} WIB
+                                        {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {contractStartTime} s/d {contractEndTime} WIB
                                     </p>
                                     <h2 className="h6 mb-1">Alamat</h2>
                                     <p className="small text-muted mb-2">{contractAddress}</p>
@@ -86,7 +86,7 @@ const Information = ({
 
                                     <h2 className="h6 mb-1">Waktu</h2>
                                     <p className="small text-muted">
-                                        {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul {receptionStartTime} s/d {receptionEndTime} WIB
+                                        {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {receptionStartTime} s/d {receptionEndTime} WIB
                                     </p>
                                     <h2 className="h6 mb-1">Alamat</h2>
                                     <p className="small text-muted mb-2">{receptionAddress}</p>

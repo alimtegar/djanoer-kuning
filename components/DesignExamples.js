@@ -16,7 +16,7 @@ const DesignExamples = () => (
             <Link href="/designs" >
                 <a role="button" className="btn btn-outline-gold">
                     Lihat Contoh Desain
-            </a>
+                </a>
             </Link>
         </div>
     </section>

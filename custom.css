@@ -39,6 +39,24 @@ h6, .h6 { font-size: 16px; }
 .btn-mask-dark { background-color: rgba(0, 0, 0, 0.66); color: #fff; }
 .btn-mask-dark:hover { background-color: #343a40; color: #fff; }
 
+.btn-whatsapp {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25D366;
+    color: #fff;
+    width: 63px;
+    height: 63px;
+    border-radius: 1000px;
+    transition: 0.25s;
+}
+
+.btn-whatsapp:hover {
+    color: #fff;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
 .form-control {
     padding: 1rem;
     font-size: 14px;
@@ -104,6 +122,7 @@ h6, .h6 { font-size: 16px; }
 /* Position */
 .top-0 { top: 0; }
 .top-50 { top: 50% }
+.right-0 { right: 0; }
 .left-0 { left: 0; }
 .left-50 { left: 50%; }
 .bottom-0 { bottom: 0; }
@@ -118,6 +137,9 @@ h6, .h6 { font-size: 16px; }
 .y-3 { transform: translateY(3px); }
 .y-4 { transform: translateY(4px); }
 .y-min-1 { transform: translateY(-1px); }
+.y-min-2 { transform: translateY(-2px); }
+.y-min-3 { transform: translateY(-3px); }
+.y-min-4 { transform: translateY(-4px); }
 .y-min-50 { transform: translateY(-50%); }
 .xy-1 { transform: translate(1px, 1px); }
 .x-min-50-y-50 { transform: translate(-50%, 50%); }
@@ -176,6 +198,7 @@ h6, .h6 { font-size: 16px; }
 /* FontAwesome */
 .fa.text-gray { color: #ddd;}
 .fa-1p66x { font-size: 1.66em; }
+.fa-2p5x { font-size: 2.5em; }
 
 /* Slick Slider */
 .slick-slider .slick-arrow { display: none !important; }

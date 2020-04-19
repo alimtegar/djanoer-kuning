@@ -149,7 +149,7 @@ const InvitationLoader = ({ condition, isAutoOpen }) => {
             <div>
                 <div className="pb-4">
                     <h1 className="font-secondary mb-0">Djanoer Kuning</h1>
-                    <h2 className="h5 font-weight-bold mb-1">Online Digital Wedding</h2>
+                    <h2 className="h6 font-italic font-weight-bold mb-1">Online Digital Wedding</h2>
                 </div>
 
                 <div className="d-flex justify-content-center pt-2">

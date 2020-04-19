@@ -11,6 +11,7 @@ import Pricing from '../components/Pricing';
 import CustomDomainPricing from '../components/CustomDomainPricing';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const Index = () => {
 	const apiUrl = process.env.API_URL;
@@ -67,9 +68,11 @@ const Index = () => {
 				<Features features={features} />
 				<Pricing pricing={pricing} />
 				<CustomDomainPricing customDomainPricing={customDomainPricing} />
-				<Contacts profile={profile} />
-				<Footer profile={profile} />
+				<Contacts profile={profile} />	
 			</main>
+
+			<Footer profile={profile} />
+			<WhatsAppButton orderUrl={profile.order_url} />
 		</div>
 	);
 };

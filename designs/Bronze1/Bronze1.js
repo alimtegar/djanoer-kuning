@@ -38,13 +38,12 @@ const Bronze1 = ({ invitation, backgroundImage, backgroundMusic, images, videos 
             receptionAddress={invitation.reception_address}
         />
         <Map embedMap={invitation.embed_map} />
-        <Gallery 
-            backgroundImage={backgroundImage} 
+        <Gallery
+            backgroundImage={backgroundImage}
             images={images}
             videos={videos}
         />
-        <Comments invitationId={invitation.id} />
-        <Footer backgroundImage={backgroundImage} />
+        <Footer />
     </div>
 );
 
