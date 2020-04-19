@@ -28,9 +28,15 @@ const Design = ({ design }) => {
                 <div className="d-flex justify-content-center">
                     {designImage ? (<img src={designImage.data.data.thumbnails[5].url} alt="" width={400} className="x-4" />) : null}
                 </div>
+
+                {design.order_url ? (
+                    <a href={design.order_url} target="_blank" rel="noopener" rel="noreferrer" role="button" className="btn btn-outline-gold mx-1 shadow-sm">
+                        Pesan Paket
+                    </a>
+                ) : null}
                 {design.example_url ? (
-                    <a href={design.example_url} target="_blank" role="button" className="btn btn-outline-gold">
-                        Lihat Desain <i className="fa fa-external-link-alt fa-sm ml-1 y-min-1" />
+                    <a href={design.example_url} target="_blank" rel="noopener" rel="noreferrer" role="button" className="btn btn-outline-gold circle mx-1 shadow-sm">
+                        <i className="far fa-eye fa-lg" />
                     </a>
                 ) : null}
             </div>

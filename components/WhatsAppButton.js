@@ -4,7 +4,7 @@ import Bounce from 'react-reveal/Bounce';
 const WhatsAppButton = ({ orderUrl }) => orderUrl ? (
     <Bounce>
         <div className="position-fixed bottom-0 left-0 m-3">
-            <a href={orderUrl} className="btn-whatsapp shadow-sm"><i className="fab fa-whatsapp fa-2p5x" /></a>
+            <a href={orderUrl} target="_blank" rel="noopener" rel="noreferrer" role="button" className="btn-whatsapp shadow-sm"><i className="fab fa-whatsapp fa-2p5x" /></a>
         </div>
     </Bounce>
 ) : null;
