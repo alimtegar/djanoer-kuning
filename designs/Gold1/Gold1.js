@@ -10,7 +10,7 @@ import Gallery from './components/Gallery';
 import Comments from './components/Comments';
 import Footer from './components/Footer';
 
-const Gold1 = ({ invitation, backgroundImage, backgroundMusic, images, videos }) => (
+const Gold1 = ({ invitation, backgroundImage, backgroundMusic, images }) => (
     <div>
         <BackgroundMusic backgroundMusic={backgroundMusic} />
         <Hero
@@ -42,7 +42,7 @@ const Gold1 = ({ invitation, backgroundImage, backgroundMusic, images, videos })
         <Gallery
             backgroundImage={backgroundImage}
             images={images}
-            videos={videos}
+            youtubeVideoIds={invitation.youtube_video_ids}
         />
         <Comments invitationId={invitation.id} />
         <Footer backgroundImage={backgroundImage} />
@@ -54,7 +54,6 @@ Gold1.propTypes = {
     backgroundImage: PropTypes.object.isRequired,
     backgroundMusic: PropTypes.object.isRequired,
     images: PropTypes.array.isRequired,
-    videos: PropTypes.array.isRequired,
 };
 
 export default Gold1;

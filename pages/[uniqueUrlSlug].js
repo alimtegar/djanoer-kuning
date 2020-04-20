@@ -20,7 +20,6 @@ const Invitation = () => {
     const [backgroundImage, setBackgroundImage] = useState({});
     const [backgroundMusic, setBackgroundMusic] = useState({});
     const [images, setImages] = useState([]);
-    const [videos, setVideos] = useState([]);
 
     useEffect(() => {
         if (
@@ -60,15 +59,6 @@ const Invitation = () => {
                             setImages(data.data);
                         })
                         .catch((err) => console.log(err));
-
-                    // Fetch Videos
-                    fetch(apiUrl + 'items/invitation_videos?filter[invitation_id]=' + _invitation.id)
-                        .then((res) => res.json())
-                        .then((data) => {
-                            setVideos(data.data);
-                        })
-                        .catch((err) => console.log(err));
-
 
                     // Fetch Design
                     fetch(apiUrl + 'items/designs/' + _invitation.design)
@@ -114,8 +104,7 @@ const Invitation = () => {
         !isObjectEmpty(invitation) &&
         !isObjectEmpty(backgroundImage) &&
         !isObjectEmpty(backgroundMusic) &&
-        images &&
-        videos
+        images
     );
 
     return (
@@ -127,7 +116,6 @@ const Invitation = () => {
                     backgroundImage={backgroundImage}
                     backgroundMusic={backgroundMusic}
                     images={images}
-                    videos={videos}
                 />
             )}
         </div>

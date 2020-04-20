@@ -6,11 +6,11 @@
 }
 
 /* Information */
-.information-content [class *= 'col']:first-child {
+.information-content [class *= 'col']:first-child:not(:last-child) {
     border-right: 1px solid #ddd;
 }
 
-.information-content [class *= 'col']:first-child:after {
+.information-content [class *= 'col']:first-child:not(:last-child):after {
     content: '&';
     position: absolute;
     top: 50%;
@@ -77,15 +77,15 @@
     .countdown-number { 
         font-size: 24px;
     }
-    .information-content [class *= 'col']:first-child {
+    .information-content [class *= 'col']:first-child:not(:last-child) {
         border-right: unset;
     }
 
-    .information-content [class *= 'col']:first-child > div {
+    .information-content [class *= 'col']:first-child:not(:last-child) > div {
         border-bottom: 1px solid #ddd;
     }
 
-    .information-content [class *= 'col']:first-child:after {
+    .information-content [class *= 'col']:first-child:not(:last-child):after {
         top: unset;
         bottom: 0;
         right: 50%;

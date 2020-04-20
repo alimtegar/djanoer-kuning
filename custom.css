@@ -202,6 +202,8 @@ h6, .h6 { font-size: 16px; }
 
 /* Slick Slider */
 .slick-slider .slick-arrow { display: none !important; }
+.slider-arrow { pointer-events: none; }
+.slider-arrow button { pointer-events: visible; }
 
 /* Responsive Styles */
 /* If screen width more than 768px */

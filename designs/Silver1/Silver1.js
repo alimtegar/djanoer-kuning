@@ -10,7 +10,7 @@ import Gallery from './components/Gallery';
 import Comments from './components/Comments';
 import Footer from './components/Footer';
 
-const Silver1 = ({ invitation, backgroundImage, backgroundMusic, images, videos }) => (
+const Silver1 = ({ invitation, backgroundImage, backgroundMusic, images }) => (
     <div>
         <BackgroundMusic backgroundMusic={backgroundMusic} />
         <Hero
@@ -41,7 +41,6 @@ const Silver1 = ({ invitation, backgroundImage, backgroundMusic, images, videos 
         <Gallery 
             backgroundImage={backgroundImage} 
             images={images}
-            videos={videos}
         />
         <Comments invitationId={invitation.id} />
         <Footer backgroundImage={backgroundImage} />
@@ -52,7 +51,6 @@ Silver1.propTypes = {
     invitation: PropTypes.object.isRequired,
     backgroundImage: PropTypes.object.isRequired,
     images: PropTypes.array.isRequired,
-    videos: PropTypes.array.isRequired,
 };
 
 export default Silver1;

@@ -64,33 +64,37 @@ const Information = ({
                     </div>
                     <div className={cx(styles['information-content'], 'my-min-3-1 my-lg-0')}>
                         <div className="row justify-content-center align-items-center">
-                            <div className="col-lg-4 px-lg-1 py-1">
-                                <div className="mask-dark rounded-xl" style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
-                                    <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
-                                        <h1 className="h2 font-secondary mb-4">Akad</h1>
-                                        <h2 className="h6 mb-1">Waktu</h2>
-                                        <p className="small">
-                                            {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {contractStartTime} s/d {contractEndTime} WIB
-                                    </p>
-                                        <h2 className="h6 mb-1">Alamat</h2>
-                                        <p className="small mb-2">{contractAddress}</p>
+                            {contractStartTime && contractEndTime && contractAddress ? (
+                                <div className="col-lg-4 px-lg-1 py-1">
+                                    <div className="mask-dark rounded-xl" style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+                                        <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
+                                            <h1 className="h2 font-secondary mb-4">Akad</h1>
+                                            <h2 className="h6 mb-1">Waktu</h2>
+                                            <p className="small">
+                                                {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {contractStartTime} s/d {contractEndTime} WIB
+                                        </p>
+                                            <h2 className="h6 mb-1">Alamat</h2>
+                                            <p className="small mb-2">{contractAddress}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-lg-4 px-lg-1 py-1">
-                                <div className="mask-dark rounded-xl" style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
-                                    <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
-                                        <h1 className="h2 font-secondary mb-4">Resepsi</h1>
+                            ) : null}
+                            {receptionStartTime && receptionEndTime && receptionAddress ? (
+                                <div className="col-lg-4 px-lg-1 py-1">
+                                    <div className="mask-dark rounded-xl" style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+                                        <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
+                                            <h1 className="h2 font-secondary mb-4">Resepsi</h1>
 
-                                        <h2 className="h6 mb-1">Waktu</h2>
-                                        <p className="small">
-                                            {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {receptionStartTime} s/d {receptionEndTime} WIB
-                                    </p>
-                                        <h2 className="h6 mb-1">Alamat</h2>
-                                        <p className="small mb-2">{receptionAddress}</p>
+                                            <h2 className="h6 mb-1">Waktu</h2>
+                                            <p className="small">
+                                                {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {receptionStartTime} s/d {receptionEndTime} WIB
+                                        </p>
+                                            <h2 className="h6 mb-1">Alamat</h2>
+                                            <p className="small mb-2">{receptionAddress}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : null}
                         </div>
                     </div>
                 </div>

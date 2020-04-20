@@ -9,7 +9,7 @@ import styles from '../../Bronze1.module.css';
 // Import Components
 import GalleryItem from './GalleryItem';
 
-const Gallery = ({ backgroundImage, images, videos }) => {
+const Gallery = ({ backgroundImage, images }) => {
     let slider;
     const settings = {
         dots: false,
@@ -66,7 +66,6 @@ const Gallery = ({ backgroundImage, images, videos }) => {
 Gallery.propTypes = {
     backgroundImage: PropTypes.object.isRequired,
     images: PropTypes.array.isRequired,
-    videos: PropTypes.array.isRequired,
 };
 
 export default Gallery;

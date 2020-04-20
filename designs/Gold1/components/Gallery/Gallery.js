@@ -7,9 +7,10 @@ import cx from 'classnames';
 import styles from '../../Gold1.module.css';
 
 // Import Components
-import GalleryItem from './GalleryItem';
+import GalleryImageItem from './GalleryImageItem';
+import GalleryVideoItem from './GalleryVideoItem';
 
-const Gallery = ({ backgroundImage, images, videos }) => {
+const Gallery = ({ backgroundImage, images, youtubeVideoIds }) => {
     let slider;
     const settings = {
         dots: false,
@@ -21,6 +22,10 @@ const Gallery = ({ backgroundImage, images, videos }) => {
         autoplaySpeed: 8000,
         pauseOnHover: true,
     };
+
+    // const SliderItems = () => {
+    //     if ()
+    // };
 
     return (
         <section
@@ -41,7 +46,8 @@ const Gallery = ({ backgroundImage, images, videos }) => {
                         <div className="position-relative">
                             <div className="rounded-xl overflow-hidden shadow-sm">
                                 <Slider ref={(c) => slider = c} {...settings} className={cx(styles["gallery-slider"])}>
-                                    {images.map((image) => (<GalleryItem image={image} key={image.id} />))}
+                                    {images.map((image) => (<GalleryImageItem image={image} key={image.id} />))}
+                                    {youtubeVideoIds.map((youtubeVideoId) => (<GalleryVideoItem youtubeVideoId={youtubeVideoId} key={youtubeVideoId.id} />))}
                                 </Slider>
                             </div>
 
@@ -66,7 +72,7 @@ const Gallery = ({ backgroundImage, images, videos }) => {
 Gallery.propTypes = {
     backgroundImage: PropTypes.object.isRequired,
     images: PropTypes.array.isRequired,
-    videos: PropTypes.array.isRequired,
+    youtubeVideoIds: PropTypes.array.isRequired,
 };
 
 export default Gallery;
