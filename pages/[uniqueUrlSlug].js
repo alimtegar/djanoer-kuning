@@ -19,6 +19,7 @@ const Invitation = () => {
     const [DesignModule, setDesignModule] = useState(() => { });
     const [backgroundImage, setBackgroundImage] = useState({});
     const [backgroundMusic, setBackgroundMusic] = useState({});
+    const [wording, setWording] = useState({});
     const [images, setImages] = useState([]);
 
     useEffect(() => {
@@ -49,6 +50,14 @@ const Invitation = () => {
                         .then((res) => res.json())
                         .then((music) => {
                             setBackgroundMusic(music);
+                        })
+                        .catch((err) => console.log(err));
+
+                    // Fetch Wording
+                    fetch(apiUrl + 'items/invitation_wordings/' + _invitation.religion)
+                        .then((res) => res.json())
+                        .then((data) => {
+                            setWording(data.data);
                         })
                         .catch((err) => console.log(err));
 
@@ -104,6 +113,7 @@ const Invitation = () => {
         !isObjectEmpty(invitation) &&
         !isObjectEmpty(backgroundImage) &&
         !isObjectEmpty(backgroundMusic) &&
+        wording &&
         images
     );
 
@@ -115,6 +125,7 @@ const Invitation = () => {
                     invitation={invitation}
                     backgroundImage={backgroundImage}
                     backgroundMusic={backgroundMusic}
+                    wording={wording}
                     images={images}
                 />
             )}

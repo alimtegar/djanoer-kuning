@@ -10,7 +10,7 @@ import Gallery from './components/Gallery';
 import Comments from './components/Comments';
 import Footer from './components/Footer';
 
-const Silver1 = ({ invitation, backgroundImage, backgroundMusic, images }) => (
+const Silver1 = ({ invitation, backgroundImage, backgroundMusic, wording, images }) => (
     <div>
         <BackgroundMusic backgroundMusic={backgroundMusic} />
         <Hero
@@ -21,6 +21,7 @@ const Silver1 = ({ invitation, backgroundImage, backgroundMusic, images }) => (
         />
         <Countdown weddingDate={invitation.wedding_date} />
         <Information
+            wording={wording}
             groomNickname={invitation.groom_nickname}
             brideNickname={invitation.bride_nickname}
             groomName={invitation.groom_name}
@@ -50,6 +51,7 @@ const Silver1 = ({ invitation, backgroundImage, backgroundMusic, images }) => (
 Silver1.propTypes = {
     invitation: PropTypes.object.isRequired,
     backgroundImage: PropTypes.object.isRequired,
+    wording: PropTypes.object.isRequired,
     images: PropTypes.array.isRequired,
 };
 

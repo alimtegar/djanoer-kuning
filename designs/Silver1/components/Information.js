@@ -5,6 +5,7 @@ import cx from 'classnames';
 import styles from '../Silver1.module.css';
 
 const Information = ({
+    wording,
     groomNickname,
     brideNickname,
     groomName,
@@ -26,7 +27,7 @@ const Information = ({
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-10 col-lg-7">
-                            <p className="small text-muted text-center mb-5"> Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang Kau ciptakan diantara putra-putri kami</p>
+                            <div className="small text-muted text-center mb-5" dangerouslySetInnerHTML={{ __html: wording.content_1 }} />
                         </div>
                     </div>
                     <div className={cx(styles['information-content'], 'my-min-3-1 my-lg-0')}>
@@ -59,7 +60,7 @@ const Information = ({
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-10 col-lg-7">
-                            <p className="small text-muted text-center mb-5">Untuk melaksanankan syariat agama-Mu, mengikuti sunnah rasul-Mu. Dalam membentuk rumah tangga Sakinah, Mawaddah Wa Rahmah dalam ikatan pernikahan. Yang insya Allah akan diselenggarakan pada:</p>
+                            <div className="small text-muted text-center mb-5" dangerouslySetInnerHTML={{ __html: wording.content_2 }} />
                         </div>
                     </div>
                     <div className={cx(styles['information-content'], 'my-min-3-1 my-lg-0')}>
@@ -106,6 +107,7 @@ const Information = ({
     );
 
 Information.propTypes = {
+    wording: PropTypes.object.isRequired,
     groomNickname: PropTypes.string.isRequired,
     brideNickname: PropTypes.string.isRequired,
     groomName: PropTypes.string.isRequired,
