@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 
 // Import Components
+import Head from '../components/Head';
 import Hero from '../components/Hero';
 import Designs from '../components/Designs';
 import Contacts from '../components/Contacts';
@@ -37,6 +38,8 @@ const Index = () => {
 
     return (
         <div>
+            <Head title="Desain" subTitle={process.env.APP_NAME} />
+
             <main>
                 {/* Designs */}
                 <Hero profile={profile} />

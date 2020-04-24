@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&family=Open+Sans&display=swap');
+
+/* Typography */
+.font-primary { font-family: 'Open Sans', 'Arial', sans-serif; }
+.font-secondary { font-family: 'Great Vibes', 'Arial', sans-serif; }
+
 /* Main Styles */
 /* Hero */
 .hero {
@@ -7,7 +13,7 @@
 
 /* Information */
 .information-content [class *= 'col']:first-child:not(:last-child) {
-    border-right: 1px solid #ddd;
+    border-right: 2px solid #eee;
 }
 
 .information-content [class *= 'col']:first-child:not(:last-child):after {
@@ -20,11 +26,11 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    color: #9CA0A7;
-    font-family: 'Dancing Script';
-    font-size: 24px;
-    height: 50px;
-    width: 50px;
+    color: #ccc;
+    font-family: 'Great Vibes';
+    font-size: 48px;
+    height: 75px;
+    width: 75px;
     /* border: 1px solid #ddd; */
     border-radius: 1000px;
 }
@@ -82,7 +88,7 @@
     }
 
     .information-content [class *= 'col']:first-child:not(:last-child) > div {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 2px solid #eee;
     }
 
     .information-content [class *= 'col']:first-child:not(:last-child):after {

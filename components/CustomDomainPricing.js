@@ -8,7 +8,7 @@ const CustomDomainPricing = ({ customDomainPricing }) => (
     <section>
         <div className="container">
             <Fade bottom>
-                <div className="card mt-min-3-1 border-0 rounded-xl shadow-reverse">
+                <div className="card mt-min-5 border-0 rounded-xl shadow-reverse">
                     <div className="card-body text-center text-lg-left p-5">
                         <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
                             <div className="mb-5 mb-lg-0">

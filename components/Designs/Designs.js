@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 
 // Import Components
 import DesignsItem from './DesignsItem';
+import DesignsItemLoader from './DesignsItemLoader';
+import { range } from '../../helpers';
 
 const Designs = ({ designs }) => (
     <section className="text-center py-6">
@@ -11,8 +13,10 @@ const Designs = ({ designs }) => (
                 <p className="small text-muted">Lorem ipsum dolor sit amet, consectetur.</p>
             </div>
             <div className="row">
-                {designs.map((design) => (
+                {designs.length ? designs.map((design) => (
                     <DesignsItem design={design} key={design.id} />
+                )) : range(0,3).map(() => (
+                    <DesignsItemLoader key={Math.random()} />
                 ))}
             </div>
         </div>

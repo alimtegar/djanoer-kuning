@@ -18,7 +18,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => (
                 Hari
             </div>
         </div>
-        <span className="mx-4 mx-lg-5 border-right h-100" />
+        <span className="h4 text-gray mx-4 mx-lg-5">:</span>
         <div>
             <div className={cx(styles['countdown-number'])}>
                 {pad(hours)}
@@ -27,7 +27,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => (
                 Jam
             </div>
         </div>
-        <span className="mx-4 mx-lg-5 border-right h-100" />
+        <span className="h4 text-gray mx-4 mx-lg-5">:</span>
         <div>
             <div className={cx(styles['countdown-number'])}>
                 {pad(minutes)}
@@ -36,7 +36,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => (
                 Menit
             </div>
         </div>
-        <span className="mx-4 mx-lg-5 border-right h-100" />
+        <span className="h4 text-gray mx-4 mx-lg-5">:</span>
         <div>
             <div className={cx(styles['countdown-number'])}>
                 {pad(seconds)}
@@ -49,9 +49,9 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => (
 );
 
 const MyCountdown = ({ weddingDate }) => (
-    <section className="text-center pt-6">
-        <div className="mb-5">
-            <h1 className="h2 font-secondary text-gold mb-1">Nantikan Harinya</h1>
+    <section className="text-center pb-6">
+        <div className="mb-4">
+            <h1 className={cx(styles['font-secondary'], "h1 text-gold mb-1")}>Nantikan Harinya</h1>
             <h2 className="small text-muted mb-0">Akan diadakan pada {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</h2>
         </div>
         <div className="d-flex justify-content-center">

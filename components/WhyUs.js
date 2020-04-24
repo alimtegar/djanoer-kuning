@@ -9,7 +9,7 @@ const WhyUs = ({ profile }) => {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
-                        <div className="bg-white text-center mt-min-3-1 p-5 rounded-xl shadow-reverse">
+                        <div className="bg-white text-center mt-min-5 p-5 rounded-xl shadow-reverse">
                             <h1 className="font-secondary h2 text-gold mb-5">
                                 {profile.title ? 'Mengapa ' + profile.title : (<TextLoader height={30} width={364} />)}
                             </h1>

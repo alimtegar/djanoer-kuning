@@ -9,7 +9,7 @@ const DesignExamples = () => (
         </div>
         <div>
             <Fade bottom>
-                <img src="/assets/images/design-examples.jpg" alt="Contoh Desain" className="img-fluid" />
+                <img src="/assets/images/design-examples.jpg" alt="Contoh Desain" className="img-fluid" style={{ width: 750 }} />
             </Fade>
         </div>
         <div className="mt-5">

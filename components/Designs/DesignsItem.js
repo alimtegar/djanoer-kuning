@@ -1,12 +1,19 @@
 import { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 import PropTypes from 'prop-types';
+import Fade from 'react-reveal/Fade';
 
-const Design = ({ design }) => {
+// Import Helpers
+import { isObjectEmpty } from '../../helpers';
+
+// Import Components
+import { RectangleLoader } from '../Loaders';
+
+const DesignsItem = ({ design }) => {
     const apiUrl = process.env.API_URL;
 
     // Use State
-    const [designImage, setDesignImage] = useState();
+    const [designImage, setDesignImage] = useState({});
 
     // Use Effect
     useEffect(() => {
@@ -20,32 +27,34 @@ const Design = ({ design }) => {
 
     return (
         <div className="col-lg-4 py-5 py-lg-0">
-            <div className="text-center">
-                <h1 className="h5 font-weight-bold mb-1">
-                    {design.title}
-                </h1>
-                <p className="small text-muted mb-0">ID: {design.unique_name}</p>
-                <div className="d-flex justify-content-center">
-                    {designImage ? (<img src={designImage.data.data.thumbnails[5].url} alt="" width={400} className="x-4" />) : null}
-                </div>
+            <Fade bottom>
+                <div className="text-center">
+                    <h1 className="h5 font-weight-bold mb-1">
+                        {design.title}
+                    </h1>
+                    <p className="small text-muted mb-0">ID: {design.unique_name}</p>
+                    <div className="d-flex justify-content-center">
+                        {!isObjectEmpty(designImage) ? (<img src={designImage.data.data.thumbnails[5].url} alt="" width={400} className="x-4" />) : (
+                            <div style={{ padding: 32 }}>
+                                <RectangleLoader height={336} width={166} />
+                            </div>
+                        )}
+                    </div>
 
-                {design.order_url ? (
                     <a href={design.order_url} target="_blank" rel="noopener" rel="noreferrer" role="button" className="btn btn-outline-gold mx-1 shadow-sm">
                         Pesan Paket
                     </a>
-                ) : null}
-                {design.example_url ? (
                     <a href={design.example_url} target="_blank" rel="noopener" rel="noreferrer" role="button" className="btn btn-outline-gold circle mx-1 shadow-sm">
                         <i className="far fa-eye fa-lg" />
                     </a>
-                ) : null}
-            </div>
+                </div>
+            </Fade>
         </div>
     );
 };
 
-Design.propTypes = {
+DesignsItem.propTypes = {
     design: PropTypes.object.isRequired,
 };
 
-export default Design;
+export default DesignsItem;

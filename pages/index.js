@@ -17,7 +17,9 @@ const Index = () => {
 	const apiUrl = process.env.API_URL;
 
 	// Use State
-	const [profile, setProfile] = useState({});
+	const [profile, setProfile] = useState({
+		order_url: "",
+	});
 	const [features, setFeatures] = useState([]);
 	const [pricing, setPricing] = useState([]);
 	const [customDomainPricing, setCustomDomainPricing] = useState({});

@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import Fade from 'react-reveal/Fade';
 
 // Import Styles
 import styles from '../Silver1.module.css';
 
+// Import Components
+import Photo from './Photo';
+
 const Information = ({
     wording,
+    groomPhoto,
+    bridePhoto,
     groomNickname,
     brideNickname,
     groomName,
@@ -22,7 +28,7 @@ const Information = ({
     contractAddress,
     receptionAddress,
 }) => (
-        <div className="py-5">
+        <div className="pb-5">
             <section className="py-4">
                 <div className="container">
                     <div className="row justify-content-center">
@@ -33,23 +39,39 @@ const Information = ({
                     <div className={cx(styles['information-content'], 'my-min-3-1 my-lg-0')}>
                         <div className="row justify-content-center">
                             <div className="col-lg-4">
-                                <div className="text-center py-5 py-lg-3 px-5">
-                                    <h1 className="h2 font-secondary text-gold mb-0">{groomNickname}</h1>
-                                    <h2 className="h6 mb-4">{groomName}</h2>
-                                    <p className="small text-muted mb-2">Putra Pertama dari {groomFatherName} dan {groomMotherName}.</p>
-                                </div>
+                                <Fade bottom>
+                                    <div className="text-center py-5 py-lg-3 px-5">
+                                        <Photo photo={groomPhoto} name={groomName} />
+                                        
+                                        <h1 className={cx(styles['font-secondary'], "h1 text-gold mb-0")}>{groomNickname}</h1>
+                                        <h2 className="h6 mb-4">{groomName}</h2>
+                                        <p className="small text-muted mb-2">Putra Pertama dari {groomFatherName} dan {groomMotherName}.</p>
+                                    </div>
+                                </Fade>
                             </div>
-                            <div className="col-lg-1 position-relative">
-                                <div className="bg-dark position-absolute z-1 top-50 left-50 x-min-50-y-min-50 circle circle-md border-2 border-dark">
-                                    <img src="/assets/images/heart.svg" alt="" height="35" className="y-2" />
-                                </div>
+
+                            <div className="col-lg-2 position-relative">
+                                <Fade bottom>
+                                    <div className="d-flex justify-content-center align-items-center h-100">
+                                        <div className="position-absolute top-50 y-min-50 bg-black circle circle-md border-2">
+                                            <img src="/assets/images/heart.svg" alt="" height="35" className="y-2" />
+                                        </div>
+
+                                        <img src="/assets/images/floral-3-1.png" alt="" width="250" />
+                                    </div>
+                                </Fade>
                             </div>
+
                             <div className="col-lg-4">
-                                <div className="text-center py-5 py-lg-3 px-5">
-                                    <h1 className="h2 font-secondary text-gold mb-0">{brideNickname}</h1>
-                                    <h2 className="h6 mb-4">{brideName}</h2>
-                                    <p className="small text-muted mb-2">Putra Pertama dari {brideFatherName} dan {brideMotherName}.</p>
-                                </div>
+                                <Fade bottom>
+                                    <div className="text-center py-5 py-lg-3 px-5">
+                                        <Photo photo={bridePhoto} name={brideName} />
+
+                                        <h1 className={cx(styles['font-secondary'], "h1 text-gold mb-0")}>{brideNickname}</h1>
+                                        <h2 className="h6 mb-4">{brideName}</h2>
+                                        <p className="small text-muted mb-2">Putra Pertama dari {brideFatherName} dan {brideMotherName}.</p>
+                                    </div>
+                                </Fade>
                             </div>
                         </div>
                     </div>
@@ -66,37 +88,47 @@ const Information = ({
                     <div className={cx(styles['information-content'], 'my-min-3-1 my-lg-0')}>
                         <div className="row justify-content-center">
                             {contractStartTime && contractEndTime && contractAddress ? (
-                                <div className="col-lg-5">
-                                    <div className="text-center py-5 py-lg-3 px-5">
-                                        <h1 className="h2 font-secondary text-gold mb-4">Akad</h1>
-                                        <h2 className="h6 mb-1">Waktu</h2>
-                                        <p className="small text-muted">
-                                            {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {contractStartTime} s/d {contractEndTime} WIB
-                                    </p>
-                                        <h2 className="h6 mb-1">Alamat</h2>
-                                        <p className="small text-muted mb-2">{contractAddress}</p>
-                                    </div>
+                                <div className="col-lg-4">
+                                    <Fade bottom>
+                                        <div className="text-center py-5 py-lg-3 px-5">
+                                            <h1 className={cx(styles['font-secondary'], "h1 text-gold mb-4")}>Akad</h1>
+                                            <h2 className="h6 mb-1">Waktu</h2>
+                                            <p className="small text-muted">
+                                                {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {contractStartTime} s/d {contractEndTime} WIB
+                                            </p>
+                                            <h2 className="h6 mb-1">Alamat</h2>
+                                            <p className="small text-muted mb-2">{contractAddress}</p>
+                                        </div>
+                                    </Fade>
                                 </div>
                             ) : null}
                             {(contractStartTime && contractEndTime && contractAddress) && (receptionStartTime && receptionEndTime && receptionAddress) ? (
-                                <div className="col-lg-1 position-relative">
-                                    <div className="bg-dark position-absolute z-1 top-50 left-50 x-min-50-y-min-50 circle circle-md border-2 border-dark">
-                                        <img src="/assets/images/wedding-day.svg" alt="" width="35" className="y-min-1" />
-                                    </div>
+                                <div className="col-lg-2 position-relative">
+                                    <Fade bottom>
+                                        <div className="d-flex justify-content-center align-items-center h-100">
+                                            <div className="position-absolute top-50 y-min-50 bg-black circle circle-md border-2">
+                                                <img src="/assets/images/wedding-day.svg" alt="" width="35" className="y-min-1" />
+                                            </div>
+
+                                            <img src="/assets/images/floral-3-1.png" alt="" width="250" />
+                                        </div>
+                                    </Fade>
                                 </div>
                             ) : null}
                             {receptionStartTime && receptionEndTime && receptionAddress ? (
-                                <div className="col-lg-5">
-                                    <div className="text-center py-5 py-lg-3 px-5">
-                                        <h1 className="h2 font-secondary text-gold mb-4">Resepsi</h1>
+                                <div className="col-lg-4">
+                                    <Fade bottom>
+                                        <div className="text-center py-5 py-lg-3 px-5">
+                                            <h1 className={cx(styles['font-secondary'], "h1 text-gold mb-4")}>Resepsi</h1>
 
-                                        <h2 className="h6 mb-1">Waktu</h2>
-                                        <p className="small text-muted">
-                                            {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {receptionStartTime} s/d {receptionEndTime} WIB
-                                    </p>
-                                        <h2 className="h6 mb-1">Alamat</h2>
-                                        <p className="small text-muted mb-2">{receptionAddress}</p>
-                                    </div>
+                                            <h2 className="h6 mb-1">Waktu</h2>
+                                            <p className="small text-muted">
+                                                {new Date(weddingDate).toLocaleString("id-ID", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} pukul <br /> {receptionStartTime} s/d {receptionEndTime} WIB
+                                            </p>
+                                            <h2 className="h6 mb-1">Alamat</h2>
+                                            <p className="small text-muted mb-2">{receptionAddress}</p>
+                                        </div>
+                                    </Fade>
                                 </div>
                             ) : null}
                         </div>

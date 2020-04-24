@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
-import BarLoader from "react-spinners/BarLoader";
 
 // Import Helpers
 import { isObjectEmpty } from '../helpers';
+
+// Import Components
+import Head from '../components/Head';
+import InvitationLoader from '../components/InvitationLoader';
 
 const Invitation = () => {
     const apiUrl = process.env.API_URL;
@@ -28,7 +31,6 @@ const Invitation = () => {
             isObjectEmpty(invitation) &&
             isObjectEmpty(design)
         ) {
-            console.log('is auto open ', is_auto_open);
             // Fetch Invitation
             fetch(apiUrl + 'items/invitations?filter[unique_url_slug]=' + uniqueUrlSlug)
                 .then((res) => res.json())
@@ -113,62 +115,32 @@ const Invitation = () => {
         !isObjectEmpty(invitation) &&
         !isObjectEmpty(backgroundImage) &&
         !isObjectEmpty(backgroundMusic) &&
-        wording &&
-        images
+        !isObjectEmpty(wording) &&
+        images.length
     );
 
     return (
-        <div>
-            <InvitationLoader condition={condition} isAutoOpen={is_auto_open} />
+        <Fragment>
+            <Head />
+            <InvitationLoader condition={condition ? condition : false} isAutoOpen={is_auto_open ? !!is_auto_open : false} />
+
             {condition && (
-                <DesignModule.default
-                    invitation={invitation}
-                    backgroundImage={backgroundImage}
-                    backgroundMusic={backgroundMusic}
-                    wording={wording}
-                    images={images}
-                />
+                <Fragment>
+                    <Head
+                        title={invitation.groom_nickname + ' & ' + invitation.bride_nickname}
+                        subTitle={process.env.APP_NAME}
+                    />
+                    <DesignModule.default
+                        invitation={invitation}
+                        backgroundImage={backgroundImage}
+                        backgroundMusic={backgroundMusic}
+                        wording={wording}
+                        images={images}
+                    />
+                </Fragment>
             )}
-        </div>
+        </Fragment>
     );
-};
-
-const InvitationLoader = ({ condition, isAutoOpen }) => {
-    // Use State
-    const [isHide, setIsHide] = useState(false);
-
-    // Functions
-    const hide = () => setIsHide(!isHide);
-
-    return !isHide ? (
-        <div
-            className="hero position-fixed z-99 d-flex justify-content-center align-items-center text-white text-center vh-100 vw-100 mask-gold"
-            style={{ backgroundImage: ' url(https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80)', }}
-        >
-            <div>
-                <div className="pb-4">
-                    <h1 className="font-secondary mb-0">Djanoer Kuning</h1>
-                    <h2 className="h6 font-italic font-weight-bold mb-1">Online Digital Wedding</h2>
-                </div>
-
-                <div className="d-flex justify-content-center pt-2">
-                    {!condition ? (
-                        <BarLoader
-                            css={{
-                                height: 2,
-                            }}
-                            size={150}
-                            color={"#fff"}
-                            loading={true}
-                        />
-                    ) : (isAutoOpen ? hide() : (
-                        <button className="btn btn-outline-light shadow-sm" onClick={() => hide()}>Buka Undangan</button>
-                    ))}
-
-                </div>
-            </div>
-        </div>
-    ) : null;
 };
 
 export default Invitation;

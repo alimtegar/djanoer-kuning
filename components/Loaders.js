@@ -111,6 +111,30 @@ SquareLoader.propTypes = {
     side: PropTypes.number.isRequired,
 };
 
+// Rectangle Loader
+export const RectangleLoader = ({ width, height }) => {
+    return (
+        <ContentLoader
+            height={height}
+            width={width}
+            speed={2}
+            primarycolor="#8b463d"
+            secondarycolor="#8e4b42"
+            style={{
+                marginTop: -1,
+                height: height
+            }}
+        >
+            <rect x="0" y="0" rx="4" ry="4" width={width} height={height} />
+        </ContentLoader>
+    );
+};
+
+RectangleLoader.propTypes = {
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+};
+
 // Background Loader
 export const BackgroundLoader = () => {
     const width = '100%';
