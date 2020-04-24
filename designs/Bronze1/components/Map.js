@@ -18,19 +18,14 @@ const Map = ({ embedMap }) => {
                             <Fade bottom>
                                 <div className="position-relative">
                                     {/* Flower Ornaments */}
-                                    <img src="/assets/images/flower-corner-1.png" alt="" className="position-absolute z-1 top-0 right-0 x-25-y-min-25" height="100" />
-                                    <img src="/assets/images/flower-corner-2.png" alt="" className="position-absolute z-1 bottom-0 left-0 x-min-25-y-25" height="100" />
+                                    <img src="/assets/images/flower-corner-1.png" alt="Ornamen Floral" className="position-absolute z-1 top-0 right-0 x-25-y-min-25" height="100" />
+                                    <img src="/assets/images/flower-corner-2.png" alt="Ornamen Floral" className="position-absolute z-1 bottom-0 left-0 x-min-25-y-25" height="100" />
 
                                     <div className="p-2 border-gray border-2" dangerouslySetInnerHTML={{ __html: embedMap }} />
                                 </div>
                             </Fade>
                         </div>
                     </div>
-                </div>
-                <div className="pt-4">
-                    <button className="btn btn-outline-gold">
-                        Google Map <i className="fa fa-external-link-alt fa-sm ml-1 y-min-1" />
-                    </button>
                 </div>
             </div>
         </section>

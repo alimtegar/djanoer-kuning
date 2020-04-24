@@ -47,7 +47,7 @@ const Information = ({
                                         style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
                                     >
                                         {/* Flower Ornaments */}
-                                        <img src="/assets/images/flower-corner-3.png" className="position-absolute z-1 top-0 left-0 x-min-25-y-min-25" height="100" />
+                                        <img src="/assets/images/flower-corner-3.png" alt="Ornamen Floral" className="position-absolute z-1 top-0 left-0 x-min-25-y-min-25" height="100" />
 
                                         <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
                                             <Photo photo={groomPhoto} name={groomName} />
@@ -75,7 +75,7 @@ const Information = ({
                                         style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
                                     >
                                         {/* Flower Ornaments */}
-                                        <img src="/assets/images/flower-corner-4.png" className="position-absolute z-1 bottom-0 right-0 x-25-y-25" height="100" />
+                                        <img src="/assets/images/flower-corner-4.png" alt="Ornamen Floral" className="position-absolute z-1 bottom-0 right-0 x-25-y-25" height="100" />
 
                                         <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
                                             <Photo photo={bridePhoto} name={brideName} />
@@ -110,7 +110,7 @@ const Information = ({
                                             style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
                                         >
                                             {/* Flower Ornaments */}
-                                            <img src="/assets/images/flower-corner-3.png" className="position-absolute z-1 top-0 left-0 x-min-25-y-min-25" height="100" />
+                                            <img src="/assets/images/flower-corner-3.png" alt="Ornamen Floral" className="position-absolute z-1 top-0 left-0 x-min-25-y-min-25" height="100" />
 
                                             <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
                                                 <h1 className={cx(styles['font-secondary'], "h1 mb-4")}>Akad</h1>
@@ -144,7 +144,7 @@ const Information = ({
                                             style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
                                         >
                                             {/* Flower Ornaments */}
-                                            <img src="/assets/images/flower-corner-4.png" className="position-absolute z-1 bottom-0 right-0 x-25-y-25" height="100" />
+                                            <img src="/assets/images/flower-corner-4.png" alt="Ornamen Floral" className="position-absolute z-1 bottom-0 right-0 x-25-y-25" height="100" />
 
                                             <div className=" text-white text-center py-5 py-lg-5 px-5 rounded-xl">
                                                 <h1 className={cx(styles['font-secondary'], "h1 mb-4")}>Resepsi</h1>

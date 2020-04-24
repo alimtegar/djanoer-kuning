@@ -51,10 +51,10 @@ const Gallery = ({ backgroundImage, images }) => {
                                 </div>
 
                                 <div className="slider-arrow position-absolute top-50 left-0 y-min-50 d-none d-lg-flex w-100 px-5">
-                                    <button className="btn btn-outline-light circle rounded-right-2 shadow-sm" onClick={() => slider.slickPrev()}>
+                                    <button className="btn btn-outline-light circle rounded-right-2 shadow-sm" aria-label="Sebelumnya" onClick={() => slider.slickPrev()}>
                                         <i className="fa fa-chevron-left x-min-1-y-1" />
                                     </button>
-                                    <button className="btn btn-outline-light circle ml-auto rounded-left-2 shadow-sm" onClick={() => slider.slickNext()}>
+                                    <button className="btn btn-outline-light circle ml-auto rounded-left-2 shadow-sm" aria-label="Selanjutnya" onClick={() => slider.slickNext()}>
                                         <i className="fa fa-chevron-right xy-1" />
                                     </button>
                                 </div>

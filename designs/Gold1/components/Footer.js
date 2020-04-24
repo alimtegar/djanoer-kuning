@@ -11,10 +11,10 @@ const Footer = ({ backgroundImage }) => (
         className={cx(styles['footer'], "position-relative text-white text-center p-5 mask-dark-thin")}
         style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
     >
-        <TopDivider height="25" />
+        <TopDivider height={25} />
 
         <p className="small mb-0">
-            © <a href="#">Djanoer Kuning</a> {new Date().getFullYear()} · Developed by <a href="#">Alterweb · Icon made by Elias Bikbulatov from www.flaticon.com</a>
+        © <a href="#">{process.env.APP_NAME}</a> {new Date().getFullYear()} · Developed by <a href="https://www.alter.web.id" target="_blank" rel="noopener" rel="noreferrer">Alterweb</a> · Icon made by Freepik from <a href="https://www.flaticon.com" target="_blank" rel="noopener" rel="noreferrer">www.flaticon.com</a>
         </p>
     </footer>
 );

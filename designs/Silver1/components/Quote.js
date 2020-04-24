@@ -7,7 +7,7 @@ const Quote = ({ quote }) => (
                 <div className="col-10 col-lg-7">
                     <div className="text-center">
                         <div>
-                            <img src="/assets/images/floral-4.png" width="202" className="mb-4" />
+                            <img src="/assets/images/floral-4.png" alt="Ornamen Floral" width="202" className="mb-4" />
                         </div>
                         <div className="small text-muted text-center mb-min-3" dangerouslySetInnerHTML={{ __html: quote }} />
                     </div>

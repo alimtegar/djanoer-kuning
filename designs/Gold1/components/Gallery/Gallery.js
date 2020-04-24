@@ -51,16 +51,16 @@ const Gallery = ({ backgroundImage, images, youtubeVideoIds }) => {
                             <div className="position-relative">
                                 <div className="rounded-xl overflow-hidden shadow">
                                     <Slider ref={(c) => slider = c} {...settings} className={cx(styles["gallery-slider"])}>
-                                        {images.map((image) => (<GalleryImageItem image={image} key={image.id} />))}
-                                        {youtubeVideoIds.map((youtubeVideoId) => (<GalleryVideoItem youtubeVideoId={youtubeVideoId} key={youtubeVideoId.id} />))}
+                                        {images.map((image) => (<GalleryImageItem image={image} key={image.id + Math.random()} />))}
+                                        {youtubeVideoIds.map((youtubeVideoId) => (<GalleryVideoItem youtubeVideoId={youtubeVideoId} key={youtubeVideoId.id + Math.random()} />))}
                                     </Slider>
                                 </div>
 
                                 <div className="slider-arrow position-absolute top-50 left-0 y-min-50 d-none d-lg-flex w-100 px-5">
-                                    <button className="btn btn-mask-dark circle rounded-right-2 shadow" onClick={() => slider.slickPrev()}>
+                                    <button className="btn btn-mask-dark circle rounded-right-2 shadow" aria-label="Sebelumnya" onClick={() => slider.slickPrev()}>
                                         <i className="fa fa-chevron-left x-min-1-y-1" />
                                     </button>
-                                    <button className="btn btn-mask-dark circle ml-auto rounded-left-2 shadow" onClick={() => slider.slickNext()}>
+                                    <button className="btn btn-mask-dark circle ml-auto rounded-left-2 shadow" aria-label="Selanjutnya" onClick={() => slider.slickNext()}>
                                         <i className="fa fa-chevron-right xy-1" />
                                     </button>
                                 </div>

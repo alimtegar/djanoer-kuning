@@ -116,7 +116,7 @@ const Invitation = () => {
         !isObjectEmpty(backgroundImage) &&
         !isObjectEmpty(backgroundMusic) &&
         !isObjectEmpty(wording) &&
-        images.length
+        images.length > 0
     );
 
     return (

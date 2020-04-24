@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import BackgroundMusic from './components/BackgroundMusic';
 import Hero from './components/Hero';
 import Quote from './components/Quote';
+import Story from './components/Story';
 import Countdown from './components/Countdown';
 import Information from './components/Information';
 import Map from './components/Map';
@@ -21,6 +22,7 @@ const Gold1 = ({ invitation, backgroundImage, backgroundMusic, wording, images }
             weddingDate={invitation.wedding_date}
         />
         <Quote quote={invitation.quote} />
+        <Story story={invitation.story} />
         <Countdown weddingDate={invitation.wedding_date} />
         <Information
             backgroundImage={backgroundImage}

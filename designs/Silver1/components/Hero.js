@@ -14,11 +14,11 @@ const Hero = ({ backgroundImage, groomNickname, brideNickname, weddingDate }) =>
     >
         <div className="position-relative text-white text-center p-5 p-lg-6 rounded-xl">
             {/* Wedding Ornament */}
-            <img src="/assets/images/floral-1.png" alt="" className="position-absolute top-0 left-50 x-min-50-y-min-50" width="320" />
+            <img src="/assets/images/floral-1.png" alt="Ornamen Floral" className="position-absolute top-0 left-50 x-min-50-y-min-50" width="320" />
             {/* <img src="/assets/images/floral-2.png" alt="" className="position-absolute bottom-0 left-50 x-min-50-y-50" width="320" /> */}
 
             <div className="bg-white position-absolute top-0 left-50 x-min-50-y-min-50 circle circle-md shadow-sm">
-                <img src="/assets/images/wedding-2.svg" alt="" height="35" className="y-min-1" />
+                <img src="/assets/images/wedding-2.svg" alt="Ikon Cincin" height="35" className="y-min-1" />
             </div>
             {/* <div className="position-absolute top-0 left-0 w-100 h-100 border-2-top" style={{ clipPath: 'polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 58% 0, 58% 15%, 42% 15%, 42% 0)' }} /> */}
             {/* {/* {/* <div className="position-absolute top-0 left-0 w-100 h-100 border-2-left border-2-right border-2-bottom" /> */}

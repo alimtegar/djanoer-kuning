@@ -21,11 +21,6 @@ const Map = ({ embedMap }) => {
                         </div>
                     </div>
                 </div>
-                <div className="pt-4">
-                    <button className="btn btn-outline-gold">
-                        Google Map <i className="fa fa-external-link-alt fa-sm ml-1 y-min-1" />
-                    </button>
-                </div>
             </div>
         </section>
     );

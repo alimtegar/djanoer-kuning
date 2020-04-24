@@ -54,10 +54,10 @@ const Information = ({
                                 <Fade bottom>
                                     <div className="d-flex justify-content-center align-items-center h-100">
                                         <div className="position-absolute top-50 y-min-50 bg-black circle circle-md border-2">
-                                            <img src="/assets/images/heart.svg" alt="" height="35" className="y-2" />
+                                            <img src="/assets/images/heart.svg" alt="Ikon Hati" height="35" className="y-2" />
                                         </div>
 
-                                        <img src="/assets/images/floral-3-1.png" alt="" width="250" />
+                                        <img src="/assets/images/floral-3-1.png" alt="Ornamen Floral" width="250" />
                                     </div>
                                 </Fade>
                             </div>
@@ -107,10 +107,10 @@ const Information = ({
                                     <Fade bottom>
                                         <div className="d-flex justify-content-center align-items-center h-100">
                                             <div className="position-absolute top-50 y-min-50 bg-black circle circle-md border-2">
-                                                <img src="/assets/images/wedding-day.svg" alt="" width="35" className="y-min-1" />
+                                                <img src="/assets/images/wedding-day.svg" alt="Ikon Kalendar" width="35" className="y-min-1" />
                                             </div>
 
-                                            <img src="/assets/images/floral-3-1.png" alt="" width="250" />
+                                            <img src="/assets/images/floral-3-1.png" alt="Ornamen Floral" width="250" />
                                         </div>
                                     </Fade>
                                 </div>
