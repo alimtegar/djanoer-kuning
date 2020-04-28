@@ -20,7 +20,7 @@ const CustomDomainPricing = ({ customDomainPricing }) => (
                                         <span>
                                             <sup className="small text-muted mr-1">Rp</sup>
                                             <span className="font-weight-bold">
-                                                {customDomainPricing.price}
+                                                {new Intl.NumberFormat('en-ID', { maximumSignificantDigits: 3 }).format(customDomainPricing.price)}
                                             </span>
                                             <sup className="small text-muted ml-1">,-</sup>
                                         </span>

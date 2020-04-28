@@ -33,8 +33,10 @@ const DesignsItem = ({ design }) => {
                         {design.title}
                     </h1>
                     <p className="small text-muted mb-0">ID: {design.unique_name}</p>
-                    <div className="d-flex justify-content-center">
-                        {!isObjectEmpty(designImage) ? (<img src={designImage.data.data.thumbnails[5].url} alt="" width={400} className="x-4" />) : (
+                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                        {!isObjectEmpty(designImage) ? (
+                            <img src={designImage.data.data.thumbnails[5].url} alt="" width={400} className="x-4"/>
+                        ) : (
                             <div style={{ padding: 32 }}>
                                 <RectangleLoader height={336} width={166} />
                             </div>

@@ -36,7 +36,8 @@ export const TextLoader = ({ height, width }) => {
             secondarycolor="#8e4b42"
             style={{
                 marginTop: -1,
-                height: height
+                height: height,
+                maxWidth: '100%',
             }}
         >
             <rect x="0" y="0" rx="4" ry="4" width={width} height={height} />

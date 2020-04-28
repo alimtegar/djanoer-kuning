@@ -9,7 +9,7 @@ import { BottomDivider } from '../../../components/Dividers';
 
 const Hero = ({ backgroundImage, groomNickname, brideNickname, weddingDate }) => (
     <section
-        className={cx(styles['hero'], "position-relative d-flex justify-content-center align-items-center vh-66 vh-lg-75 mb-6 p-5 mask-dark-thin")}
+        className={cx(styles['hero'], "position-relative d-flex justify-content-center align-items-center vh-83 vh-lg-75 mb-6 p-5 mask-dark-thin")}
         style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
     >
         <div className="position-relative text-white text-center p-5 p-lg-6">

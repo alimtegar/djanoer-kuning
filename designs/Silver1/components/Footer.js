@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import cx from 'classnames';
 
 // Import Styles
@@ -14,7 +15,7 @@ const Footer = ({ backgroundImage }) => (
         <TopDivider height={25} />
 
         <p className="small mb-0">
-            © <a href="#">{process.env.APP_NAME}</a> {new Date().getFullYear()} · Developed by <a href="https://www.alter.web.id" target="_blank" rel="noopener" rel="noreferrer">Alterweb</a> · Icon made by Freepik from <a href="https://www.flaticon.com" target="_blank" rel="noopener" rel="noreferrer">www.flaticon.com</a>
+            © <Link href="/" ><a>{process.env.APP_NAME}</a></Link> {new Date().getFullYear()} · Developed by <a href="https://www.alter.web.id" target="_blank" rel="noopener" rel="noreferrer">Alterweb</a> · Icon made by Freepik from <a href="https://www.flaticon.com" target="_blank" rel="noopener" rel="noreferrer">www.flaticon.com</a>
         </p>
     </footer>
 );

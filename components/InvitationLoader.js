@@ -13,10 +13,7 @@ const InvitationLoader = ({ condition, isAutoOpen }) => {
     return (
         <div className="position-fixed z-99">
             <Slide top collapse when={!isHide}>
-                <div
-                    className="hero d-flex justify-content-center align-items-center text-white vh-100 vw-100 text-center mask-gold"
-                    style={{ backgroundImage: ' url(https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80)', }}
-                >
+                <div className="hero d-flex justify-content-center align-items-center text-white vh-100 vw-100 text-center mask-gold">
                     <div>
                         <div className="pb-4">
                             <h1 className="font-secondary mb-0">{process.env.APP_NAME}</h1>

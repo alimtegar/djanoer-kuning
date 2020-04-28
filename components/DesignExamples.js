@@ -1,4 +1,4 @@
-import Link from 'next/Link';
+import Link from 'next/link';
 import Fade from 'react-reveal/Slide';
 
 const DesignExamples = () => (
@@ -13,7 +13,7 @@ const DesignExamples = () => (
             </Fade>
         </div>
         <div className="mt-5">
-            <Link href="/designs" >
+            <Link href="/desain" >
                 <a role="button" className="btn btn-outline-gold">
                     Lihat Contoh Desain
                 </a>

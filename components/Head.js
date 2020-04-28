@@ -5,7 +5,7 @@ const MyHead = ({ title, subTitle, description, keywords }) => (
     <Head>
         <meta charSet='utf-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-        <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
         <title>{title} | {subTitle}</title>
@@ -19,6 +19,8 @@ const MyHead = ({ title, subTitle, description, keywords }) => (
         <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="1024x1024" href="/android-icon-1024x1024.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/android-icon-512x512.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />

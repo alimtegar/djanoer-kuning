@@ -74,7 +74,7 @@
 @media only screen and (max-width: 768px) {
     /* Main Styles */
     /* Hero */
-    .hero { background-size: auto 100%; }
+    .hero { background-size: auto 100% !important; }
 
     /* Gallery */
     .gallery { background-size: auto 100%; }
