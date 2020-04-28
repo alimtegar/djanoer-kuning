@@ -1,0 +1,61 @@
+import PropTypes from 'prop-types';
+
+// Import Components
+import BackgroundMusic from './components/BackgroundMusic';
+import Hero from './components/Hero';
+import Quote from './components/Quote';
+import Countdown from './components/Countdown';
+import Information from './components/Information';
+import Map from './components/Map';
+import Gallery from './components/Gallery';
+import Comments from './components/Comments';
+import Footer from './components/Footer';
+
+const Bronze1 = ({ invitation, backgroundImage, backgroundMusic, wording, images }) => (
+    <div>
+        <BackgroundMusic backgroundMusic={backgroundMusic} />
+        <Hero
+            backgroundImage={backgroundImage}
+            groomNickname={invitation.groom_nickname}
+            brideNickname={invitation.bride_nickname}
+            weddingDate={invitation.wedding_date}
+        />
+        <Quote quote={invitation.quote} />
+        <Countdown weddingDate={invitation.wedding_date} />
+        <Information
+            wording={wording}
+            groomPhoto={invitation.groom_photo}
+            bridePhoto={invitation.bride_photo}
+            groomNickname={invitation.groom_nickname}
+            brideNickname={invitation.bride_nickname}
+            groomName={invitation.groom_name}
+            brideName={invitation.bride_name}
+            groomFatherName={invitation.groom_father_name}
+            brideFatherName={invitation.bride_father_name}
+            groomMotherName={invitation.groom_mother_name}
+            brideMotherName={invitation.bride_mother_name}
+            weddingDate={invitation.wedding_date}
+            contractStartTime={invitation.contract_start_time}
+            receptionStartTime={invitation.reception_start_time}
+            contractEndTime={invitation.contract_end_time}
+            receptionEndTime={invitation.reception_end_time}
+            contractAddress={invitation.contract_address}
+            receptionAddress={invitation.reception_address}
+        />
+        <Map embedMap={invitation.embed_map} />
+        <Gallery
+            backgroundImage={backgroundImage}
+            images={images}
+        />
+        <Footer />
+    </div>
+);
+
+Bronze1.propTypes = {
+    invitation: PropTypes.object.isRequired,
+    backgroundImage: PropTypes.object.isRequired,
+    wording: PropTypes.object.isRequired,
+    images: PropTypes.array.isRequired,
+};
+
+export default Bronze1;

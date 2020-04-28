@@ -1,0 +1,119 @@
+/* Root */
+html, body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Styles */
+/* Hero */
+.hero { 
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80'); 
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.hero a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Why US */
+.why-us-content p:last-child { margin-bottom: 0; }
+
+/* Features */
+.features-body [class *= "col"] .features-item:before {    
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: #ddd;
+    /* right: 50%; */
+    top: 0;
+}
+
+.features-body [class *= "col"]:nth-of-type(n + 4) .features-item:before {
+    width: 80%;
+    height: 1px;
+    transform: translateX(-50%);
+}
+
+.features-body [class *= "col"]:not(:nth-of-type(3n)):not(:last-child) .features-item:after {
+    content: "";
+    position: absolute;
+    background: #ddd;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    transform: translateY(-50%);
+}
+
+/* Pricing */
+.pricing { 
+    background-image: url('https://images.unsplash.com/photo-1518600593288-2ec370b80cba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80'); 
+    background-position: center;
+    background-size: 100% auto;
+}
+
+/* Contacts */
+.contacts-body ul li:not(:nth-of-type(3n)) .contacts-item:after {
+    content: "";
+    position: absolute;
+    background: #ddd;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    transform: translateY(-50%);   
+}
+
+/* Footer */
+.footer { 
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80'); 
+    background-position: center;
+}
+
+.footer a {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+/* If screen width less than 768px */
+@media only screen and (max-width: 768px) {
+    /* Main Styles */
+    /* Hero */
+    .hero {
+        background-size: auto 100%;
+    }
+
+    .hero-sub-title {
+        font-size: 20px;
+    }
+    
+    /* Features */
+    .features-body [class *= "col"]:nth-of-type(n + 2) .features-item:before {
+        width: 80%;
+        height: 1px;
+        transform: translateX(-50%);
+    }
+
+    .features-body [class *= "col"]:not(:nth-of-type(3n)):not(:last-child) .features-item:after {
+        display: none;
+    }
+    
+    /* Pricing */
+    .pricing { background-size: auto 100%; }
+
+    /* Contacts */
+    .contacts-body ul li,
+    .contacts-body ul li .contacts-item {
+        width: 100%;
+    }
+    .contacts-body ul li:not(:nth-of-type(3n)) .contacts-item:after {
+        top: unset;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+    }
+}
