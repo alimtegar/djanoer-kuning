@@ -18,8 +18,8 @@ const Map = ({ embedMap }) => {
                             <Fade bottom>
                                 <div className="position-relative">
                                     {/* Flower Ornaments */}
-                                    <img src="/assets/images/flower-corner-1.png" alt="Ornamen Floral" className="position-absolute z-1 top-0 right-0 x-25-y-min-25" height="100" />
-                                    <img src="/assets/images/flower-corner-2.png" alt="Ornamen Floral" className="position-absolute z-1 bottom-0 left-0 x-min-25-y-25" height="100" />
+                                    <img src="/assets/images/flower-corner-1.png" alt="Ornamen Floral" className="position-absolute z-1 top-0 right-0 x-25-y-min-25 filter-grayscale" height="100" />
+                                    <img src="/assets/images/flower-corner-2.png" alt="Ornamen Floral" className="position-absolute z-1 bottom-0 left-0 x-min-25-y-25 filter-grayscale" height="100" />
 
                                     <div className="p-2 border-gray border-2" dangerouslySetInnerHTML={{ __html: embedMap }} />
                                 </div>

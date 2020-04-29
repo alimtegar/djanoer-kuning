@@ -234,6 +234,9 @@ h6, .h6 { font-size: 16px; }
     width: 100%;
 }
 
+/* Filter */
+.filter-grayscale { filter: grayscale(1); }
+
 /* FontAwesome */
 .fa.text-gray { color: #ddd;}
 .fa-1p66x { font-size: 1.66em; }

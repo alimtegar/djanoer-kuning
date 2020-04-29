@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import Fade from 'react-reveal/Fade';
 
 // Import Styles
 import styles from '../Gold1.module.css';
@@ -17,9 +18,11 @@ const Story = ({ story }) => (
                         <ul className="nav">
                             {Object.entries(story).map((storyItem) => (
                                 <li className={cx(styles['story-item'], "nav-item")} key={storyItem[0]}>
-                                    <div className="bg-gradient-black text-white my-1 p-3 rounded-xl shadow">
-                                        <div dangerouslySetInnerHTML={{ __html: storyItem[1] }} />
-                                    </div>
+                                    <Fade bottom>
+                                        <div className="bg-gradient-black text-white my-1 p-3 rounded-xl shadow">
+                                            <div dangerouslySetInnerHTML={{ __html: storyItem[1] }} />
+                                        </div>
+                                    </Fade>
                                 </li>
                             ))}
                         </ul>

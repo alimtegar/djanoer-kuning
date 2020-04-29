@@ -14,8 +14,8 @@ const Hero = ({ backgroundImage, groomNickname, brideNickname, weddingDate }) =>
     >
         <div className="position-relative text-white text-center p-5 p-lg-6 mask-dark rounded-xl">
             {/* Flower Ornaments */}
-            <img src="/assets/images/flower-corner-3.png" alt="Ornamen Floral" className="position-absolute z-1 top-0 left-0 x-min-25-y-min-25" height="100" />
-            <img src="/assets/images/flower-corner-4.png" alt="Ornamen Floral" className="position-absolute z-1 bottom-0 right-0 x-25-y-25" height="100" />
+            <img src="/assets/images/flower-corner-3.png" alt="Ornamen Floral" className="position-absolute z-1 top-0 left-0 x-min-25-y-min-25 filter-grayscale" height="100" />
+            <img src="/assets/images/flower-corner-4.png" alt="Ornamen Floral" className="position-absolute z-1 bottom-0 right-0 x-25-y-25 filter-grayscale" height="100" />
 
             <div className="position-absolute top-0 left-50 x-min-50-y-min-50 circle circle-md bg-gradient-black shadow">
                 <img src="/assets/images/wedding-3.svg" alt="Ikon Cincin" height="35" className="y-min-1" />
