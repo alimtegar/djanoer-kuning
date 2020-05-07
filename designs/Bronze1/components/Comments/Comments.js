@@ -9,7 +9,7 @@ import styles from '../../Bronze1.module.css';
 // Import Components
 import CommentForm from './CommentForm';
 
-const Comments = ({ invitationId }) => {
+const Comments = ({ id }) => {
     const apiUrl = process.env.API_URL;
 
     // Use State
@@ -17,7 +17,7 @@ const Comments = ({ invitationId }) => {
 
     // Use Effect
     useEffect(() => {
-        fetch(apiUrl + 'items/invitation_comments?filter[invitation_id]=' + invitationId)
+        fetch(apiUrl + 'items/invitation_comments?filter[invitation]=' + id)
             .then((res) => res.json())
             .then((data) => {
                 setComments(data.data);
@@ -31,7 +31,7 @@ const Comments = ({ invitationId }) => {
             method: 'POST',
             body: JSON.stringify({
                 ...comment,
-                invitation_id: invitationId,
+                invitation: id,
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const Comments = ({ invitationId }) => {
     };
 
     return (
-        <section className="py-6">
+        <section className="pb-6">
             <div className="container">
                 <div className="text-center mb-5">
                     <h1 className="h2 font-secondary text-gold mb-1">Pesan Anda</h1>
@@ -82,7 +82,7 @@ const Comments = ({ invitationId }) => {
 };
 
 Comments.propTypes = {
-    invitationId: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
 };
 
 export default Comments;

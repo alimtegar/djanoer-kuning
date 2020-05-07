@@ -47,7 +47,7 @@ const Silver1 = ({ invitation, backgroundImage, backgroundMusic, wording, images
             backgroundImage={backgroundImage} 
             images={images}
         />
-        <Comments invitationId={invitation.id} />
+        <Comments id={invitation.id} />
         <Footer backgroundImage={backgroundImage} />
     </div>
 );

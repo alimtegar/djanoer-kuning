@@ -31,7 +31,7 @@ const Gallery = ({ backgroundImage, images, youtubeVideoIds }) => {
 
     return (
         <section
-            className={cx(styles['gallery'], "position-relative text-center py-6 mask-dark-thin")}
+            className={cx(styles['gallery'], "position-relative text-center mb-6 py-6 mask-dark-thin")}
             style={{ backgroundImage: 'url(' + backgroundImage.data.data.full_url + ')', }}
         >
             <Head>

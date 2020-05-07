@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { toast } from 'react-toastify';
 import Fade from 'react-reveal/Fade';
 
 // Import Styles
@@ -10,7 +11,10 @@ import styles from '../../Silver1.module.css';
 // Import Components
 import CommentForm from './CommentForm';
 
-const Comments = ({ invitationId }) => {
+// Import Helpers
+import {isObjectEmpty} from '../../../../helpers';
+
+const Comments = ({ id }) => {
     const apiUrl = process.env.API_URL;
 
     // Use State
@@ -18,7 +22,7 @@ const Comments = ({ invitationId }) => {
 
     // Use Effect
     useEffect(() => {
-        fetch(apiUrl + 'items/invitation_comments?filter[invitation_id]=' + invitationId)
+        fetch(apiUrl + 'items/invitation_comments?filter[invitation]=' + id)
             .then((res) => res.json())
             .then((data) => {
                 setComments(data.data);
@@ -32,7 +36,7 @@ const Comments = ({ invitationId }) => {
             method: 'POST',
             body: JSON.stringify({
                 ...comment,
-                invitation_id: invitationId,
+                invitation: id,
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -40,20 +44,52 @@ const Comments = ({ invitationId }) => {
         })
             .then((res) => res.json())
             .then((data) => {
-                const _comment = data.data;
+                if (!isObjectEmpty(data.data)) {
+                    const _comment = data.data;
 
-                const _comments = [
-                    ...comments,
-                    _comment,
-                ];
+                    const _comments = [
+                        ...comments,
+                        _comment,
+                    ];
 
-                setComments(_comments);
+                    setComments(_comments);
+
+                    toast.success('Sukses mengkonfirmasi kehadiran!', {
+                        position: "bottom-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined
+                    });
+                } else if (!isObjectEmpty(data.error)) {
+                    toast.error(data.error.message, {
+                        position: "bottom-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined
+                    });
+                } else {
+                    toast.error('Error!', {
+                        position: "bottom-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined
+                    });
+                }
             })
             .catch((err) => console.log(err));
     };
 
     return (
-        <section className="py-6">
+        <section className="pb-6">
             <div className="container">
                 <div className="text-center mb-5">
                     <h1 className={cx(styles['font-secondary'], "h1 text-gold mb-1")}>Pesan Anda</h1>
@@ -85,7 +121,7 @@ const Comments = ({ invitationId }) => {
 };
 
 Comments.propTypes = {
-    invitationId: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
 };
 
 export default Comments;

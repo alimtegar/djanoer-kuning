@@ -1,4 +1,5 @@
 // Import Styles
+import "react-toastify/dist/ReactToastify.css";
 import '../custom.css';
 import '../style.css';
 

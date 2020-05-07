@@ -9,6 +9,7 @@ import Countdown from './components/Countdown';
 import Information from './components/Information';
 import Map from './components/Map';
 import Gallery from './components/Gallery';
+import RSVP from './components/RSVP';
 import Comments from './components/Comments';
 import Footer from './components/Footer';
 
@@ -51,7 +52,8 @@ const Gold1 = ({ invitation, backgroundImage, backgroundMusic, wording, images }
             images={images}
             youtubeVideoIds={invitation.youtube_video_ids}
         />
-        <Comments invitationId={invitation.id} />
+        <RSVP id={invitation.id} />
+        <Comments id={invitation.id} />
         <Footer backgroundImage={backgroundImage} />
     </div>
 );

@@ -1,6 +1,7 @@
 import { Fragment, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
+import { ToastContainer, Slide } from 'react-toastify';
 
 // Import Helpers
 import { isObjectEmpty } from '../helpers';
@@ -139,6 +140,21 @@ const Invitation = () => {
                     />
                 </Fragment>
             )}
+
+            <ToastContainer
+                position="bottom-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                closeButton={false}
+                className="text-center"
+                transition={Slide}
+            />
         </Fragment>
     );
 };

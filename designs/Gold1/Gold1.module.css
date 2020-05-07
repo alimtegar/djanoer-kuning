@@ -63,19 +63,24 @@
     border-bottom: 2px solid #343a40;
 } */
 
-.comments-form input,
-.comments-form textarea {
+/* Form */
+.form input,
+.form textarea,
+.form select {
     border-width: 0;
     background-color: rgba(0,0,0,0.066);
     border-radius: 0.5rem;
 }
 
-.comments-form input:hover,
-.comments-form textarea:hover,
-.comments-form input:focus,
-.comments-form textarea:focus,
-.comments-form input:active,
-.comments-form textarea:active {
+.form input:hover,
+.form input:focus,
+.form input:active,
+.form textarea:hover,
+.form textarea:focus,
+.form textarea:active,
+.form select:hover,
+.form select:focus,
+.form select:active {
     background-color: rgba(0,0,0,0.066);;
 }
 

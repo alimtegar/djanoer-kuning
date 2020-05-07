@@ -22,15 +22,13 @@ const Story = ({ story }) => (
                                 const year = storyItem[0];
 
                                 return (
-                                    <Fragment>
+                                    <Fragment key={year + Math.random()}>
                                         {storyItemValues.map((storyItemValue) => {
-                                            console.log(storyItemValue)
-
                                             const title = storyItemValue[0];
                                             const content = storyItemValue[1];
 
                                             return (
-                                                <li className={cx(styles['story-item'], "nav-item")} key={storyItem[0]}>
+                                                <li className={cx(styles['story-item'], "nav-item")} key={year + Math.random()}>
                                                     <Fade bottom>
                                                         <div className="bg-gradient-black text-white my-1 p-3 rounded-xl shadow">
                                                             <h3 className="h6 font-weight-bold">{year} <span className="mx-1">·</span> {title}</h3>

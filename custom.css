@@ -59,10 +59,11 @@ h6, .h6 { font-size: 16px; }
 }
 
 .form-control {
-    padding: 1rem;
+    padding: 1rem !important;
     font-size: 14px;
-    height: unset;
+    /* height: unset; */
     border-radius: 0;
+    height: 53px;
 }
 
 .form-control::placeholder {
