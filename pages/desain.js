@@ -28,7 +28,7 @@ const Index = () => {
             .catch((err) => console.log(err));
 
         // Fetch Features
-        fetch(apiUrl + 'items/designs')
+        fetch(apiUrl + 'items/designs?filter[status]=published')
             .then((res) => res.json())
             .then((data) => {
                 setDesigns(data.data);

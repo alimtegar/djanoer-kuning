@@ -35,7 +35,7 @@ const Index = () => {
 			.catch((err) => console.log(err));
 
 		// Fetch Features
-		fetch(apiUrl + 'items/features')
+		fetch(apiUrl + 'items/features?filter[status]=published')
 			.then((res) => res.json())
 			.then((data) => {
 				setFeatures(data.data);
@@ -43,7 +43,7 @@ const Index = () => {
 			.catch((err) => console.log(err));
 
 		// Fetch Pricing
-		fetch(apiUrl + 'items/pricing')
+		fetch(apiUrl + 'items/pricing?filter[status]=published')
 			.then((res) => res.json())
 			.then((data) => {
 				setPricing(data.data);

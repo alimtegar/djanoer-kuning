@@ -33,7 +33,7 @@ const Invitation = () => {
             isObjectEmpty(design)
         ) {
             // Fetch Invitation
-            fetch(apiUrl + 'items/invitations?filter[unique_url_slug]=' + uniqueUrlSlug)
+            fetch(apiUrl + 'items/invitations?filter[status]=published&filter[unique_url_slug]=' + uniqueUrlSlug)
                 .then((res) => res.json())
                 .then((data) => {
                     const _invitation = data.data[0];

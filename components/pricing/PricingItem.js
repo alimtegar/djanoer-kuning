@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 
+// Import Helpers
+import { isObjectEmpty } from '../../helpers';
+
 const PricingItem = ({ pricingItem }) => (
     <div className="col-lg-4 py-2">
         <Fade bottom>
@@ -20,19 +23,19 @@ const PricingItem = ({ pricingItem }) => (
                 </div>
                 <div className="card-body">
                     <ul className="nav flex-column mt-3">
-                        {pricingItem.features.map((pricingItemFeature) => (
+                        {pricingItem.features && Object.keys(pricingItem.features).sort((a, b) => a - b).map((key) => (
                             <li className="nav-item py-1" key={Math.random()}>
                                 <div className="d-inline-flex align-items-center small text-muted">
                                     <i className="fa fa-xs fa-check text-gold mr-2" />
-                                    {pricingItemFeature}
+                                    {pricingItem.features[key]}
                                 </div>
                             </li>
                         ))}
-                        {pricingItem.non_features.map((pricingItemNonFeature) => (
+                        {pricingItem.non_features && Object.keys(pricingItem.non_features).sort((a, b) => a - b).map((key) => (
                             <li className="nav-item py-1" key={Math.random()}>
                                 <div className="d-inline-flex align-items-center small text-gray">
                                     <i className="fa fa-xs fa-times text-gray mr-2" />
-                                    {pricingItemNonFeature}
+                                    {pricingItem.non_features[key]}
                                 </div>
                             </li>
                         ))}
