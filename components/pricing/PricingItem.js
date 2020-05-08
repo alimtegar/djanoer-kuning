@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 
-// Import Helpers
-import { isObjectEmpty } from '../../helpers';
-
 const PricingItem = ({ pricingItem }) => (
     <div className="col-lg-4 py-2">
         <Fade bottom>
